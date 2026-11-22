@@ -14,6 +14,8 @@ data_worker_placement: direct
 entry_mode: fresh
 git_enabled: true
 git_main_branch: migration
+git_remote_name: origin
+git_remote_url: git@github.com:nklnarayana/SQLServerToSnowflakeMigration.git
 git_use_enclosing_repo: true
 has_etl_code: 'false'
 has_power_bi: 'false'
