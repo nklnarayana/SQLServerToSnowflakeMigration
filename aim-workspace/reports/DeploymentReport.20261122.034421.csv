@@ -1,0 +1,7 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+financial_planning.Planning.ConsolidationJournal,Table,Failed,Unresolved EWI marker(s): SSC-EWI-0073 (line 42) - resolve before deploying,financial_planning,Planning,financial_planning.Planning.ConsolidationJournal,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.ConsolidationJournalLine,Table,Failed,"Error: JavaScript execution error: Uncaught Execution of multiple statements failed on statement ""CREATE OR REPLACE TABLE Planni..."" (at line 8, position 0).
+SQL compilation error:
+Table 'FINANCIAL_PLANNING.PLANNING.CONSOLIDATIONJOURNAL' does not exist or not authorized. Your primary role ACCOUNTADMIN or one of your secondary roles must have at least one privilege granted on TABLE FINANCIAL_PLANNING.PLANNING.CONSOLIDATIONJOURNAL. in SYSTEM$MULTISTMT at '    throw `Execution of multiple statements failed on statement {0} (at line {1}, position {2}).`.replace('{1}', LINES[i])' position 4
+stackstrace: 
+SYSTEM$MULTISTMT line: 10 SqlState: P0000, VendorCode: 100132, QueryId: 01c892c0-030a-0ccd-0000-001353eec601",financial_planning,Planning,financial_planning.Planning.ConsolidationJournalLine,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
