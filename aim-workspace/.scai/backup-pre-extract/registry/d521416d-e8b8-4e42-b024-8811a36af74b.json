@@ -1,0 +1,34 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "exclusion": [],
+      "status": "failed"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "341a180c-0f3a-4066-8637-ccb6e60b45a7"
+    ]
+  },
+  "extensions": {},
+  "id": "d521416d-e8b8-4e42-b024-8811a36af74b",
+  "inScope": true,
+  "isMissing": true,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "source": {
+    "canonicalName": "FINANCIAL_PLANNING.dbo.ca",
+    "database": "FINANCIAL_PLANNING",
+    "name": "ca",
+    "objectType": "other",
+    "schema": "dbo"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

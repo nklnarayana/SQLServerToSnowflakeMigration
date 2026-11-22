@@ -1,0 +1,7 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+financial_planning.Planning.CostCenter,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.CostCenter,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.GLAccount,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.GLAccount,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.FiscalPeriod,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.FiscalPeriod,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.BudgetHeader,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.BudgetHeader,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.AllocationRule,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.AllocationRule,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.BudgetLineItem,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.BudgetLineItem,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING

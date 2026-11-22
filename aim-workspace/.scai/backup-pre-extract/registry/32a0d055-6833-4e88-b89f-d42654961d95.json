@@ -1,0 +1,333 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "963ccd8f-332e-4882-aa71-6af2da06071f",
+      "b0ca5325-7a9b-45f6-a2ce-c2bc234afe7a"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/view/vw_budgetconsolidationsummary"
+    },
+    "converted": {
+      "checksum": "c036ef36d416c125d1c5e6d78871c985",
+      "path": "snowflake/financial_planning/planning/view/vw_budgetconsolidationsummary.sql"
+    },
+    "source": {
+      "checksum": "7bff2c66157fd1f30788fcde5eb65f48",
+      "path": "source/financial_planning/planning/view/vw_budgetconsolidationsummary.sql"
+    }
+  },
+  "id": "32a0d055-6833-4e88-b89f-d42654961d95",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 10
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetHeaderID",
+        "nullable": true,
+        "targetName": "BudgetHeaderID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetCode",
+        "nullable": true,
+        "targetName": "BudgetCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetName",
+        "nullable": true,
+        "targetName": "BudgetName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetType",
+        "nullable": true,
+        "targetName": "BudgetType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ScenarioType",
+        "nullable": true,
+        "targetName": "ScenarioType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalYear",
+        "nullable": true,
+        "targetName": "FiscalYear",
+        "targetType": "SMALLINT",
+        "type": "SMALLINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalPeriodID",
+        "nullable": true,
+        "targetName": "FiscalPeriodID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalQuarter",
+        "nullable": true,
+        "targetName": "FiscalQuarter",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalMonth",
+        "nullable": true,
+        "targetName": "FiscalMonth",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PeriodName",
+        "nullable": true,
+        "targetName": "PeriodName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "GLAccountID",
+        "nullable": true,
+        "targetName": "GLAccountID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountNumber",
+        "nullable": true,
+        "targetName": "AccountNumber",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountName",
+        "nullable": true,
+        "targetName": "AccountName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountType",
+        "nullable": true,
+        "targetName": "AccountType",
+        "targetType": "CHAR",
+        "type": "CHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CostCenterID",
+        "nullable": true,
+        "targetName": "CostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CostCenterCode",
+        "nullable": true,
+        "targetName": "CostCenterCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CostCenterName",
+        "nullable": true,
+        "targetName": "CostCenterName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ParentCostCenterID",
+        "nullable": true,
+        "targetName": "ParentCostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalOriginalAmount",
+        "nullable": true,
+        "targetName": "TotalOriginalAmount",
+        "targetType": "EXACTNUMERIC",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalAdjustedAmount",
+        "nullable": true,
+        "targetName": "TotalAdjustedAmount",
+        "targetType": "EXACTNUMERIC",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalFinalAmount",
+        "nullable": true,
+        "targetName": "TotalFinalAmount",
+        "targetType": "EXACTNUMERIC",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalLocalCurrency",
+        "nullable": true,
+        "targetName": "TotalLocalCurrency",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalReportingCurrency",
+        "nullable": true,
+        "targetName": "TotalReportingCurrency",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "LineItemCount",
+        "nullable": true,
+        "targetName": "LineItemCount",
+        "targetType": "EXACTNUMERIC",
+        "type": "BIGINT"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.vw_BudgetConsolidationSummary",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "vw_BudgetConsolidationSummary",
+    "objectType": "view",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.vw_BudgetConsolidationSummary",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "vw_BudgetConsolidationSummary",
+    "objectType": "view",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

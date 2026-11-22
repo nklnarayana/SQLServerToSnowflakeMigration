@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "inputPath": "/Users/lakshmi/Projects/snowflake-migration/staged-costcenterhistory/",
+  "stagedAt": "artifacts/source_raw/20261122.024755",
+  "databaseAssignments": [
+    {
+      "inputPath": "CostCenterHistory.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "file"
+    }
+  ],
+  "duplicateDecisions": []
+}

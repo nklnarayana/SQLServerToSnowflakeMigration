@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "inputPath": "/Users/lakshmi/Projects/snowflake-migration/staged-input/",
+  "stagedAt": "artifacts/source_raw/20261122.005508",
+  "databaseAssignments": [
+    {
+      "inputPath": "Functions/fn_GetAllocationFactor.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Functions/fn_GetHierarchyPath.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Functions/tvf_ExplodeCostCenterHierarchy.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Functions/tvf_GetBudgetVariance.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Schema/Planning.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "StoredProcedures/usp_BulkImportBudgetData.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "StoredProcedures/usp_ExecuteCostAllocation.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "StoredProcedures/usp_GenerateRollingForecast.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "StoredProcedures/usp_PerformFinancialClose.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "StoredProcedures/usp_ProcessBudgetConsolidation.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "StoredProcedures/usp_ReconcileIntercompanyBalances.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/AllocationRule.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/BudgetHeader.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/BudgetLineItem.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/ConsolidationJournal.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/ConsolidationJournalLine.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/CostCenter.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/FiscalPeriod.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/GLAccount.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/PXML_BudgetHeader_ExtendedProperties.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Tables/SXML_BudgetHeader_ExtendedProperties_Path.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "UserDefinedTypes/AllocationResultTableType.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "UserDefinedTypes/BudgetLineItemTableType.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "UserDefinedTypes/HierarchyNodeTableType.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Views/vw_AllocationRuleTargets.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    },
+    {
+      "inputPath": "Views/vw_BudgetConsolidationSummary.sql",
+      "database": "FINANCIAL_PLANNING",
+      "source": "option"
+    }
+  ],
+  "duplicateDecisions": []
+}

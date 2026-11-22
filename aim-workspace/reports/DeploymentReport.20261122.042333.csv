@@ -1,0 +1,3 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+financial_planning.Planning.ConsolidationJournal,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.ConsolidationJournal,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.ConsolidationJournalLine,Table,Deployed,,financial_planning,Planning,financial_planning.Planning.ConsolidationJournalLine,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING

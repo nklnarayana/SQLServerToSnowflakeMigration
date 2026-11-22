@@ -1,0 +1,275 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8e7c23a9-b766-433b-8142-659d7310c9ad",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "4f435dc1-0e76-4d45-9a98-8cebea10e5f1",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "04e8f1ca-14ee-4f42-b004-2254463f671b",
+      "17941e31-fa42-4e93-823d-8f016919f7c0"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/consolidationjournalline"
+    },
+    "converted": {
+      "checksum": "607c911c8c6b20fa3e78cd5536db4dfd",
+      "path": "snowflake/financial_planning/planning/table/consolidationjournalline.sql"
+    },
+    "source": {
+      "checksum": "fba60a1a824288f86e70fe6848c567b7",
+      "path": "source/financial_planning/planning/table/consolidationjournalline.sql"
+    }
+  },
+  "id": "f6ea4fac-78c8-4014-8da2-1c3cb9931501",
+  "inScope": true,
+  "isMissing": false,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "JournalLineID",
+        "nullable": false,
+        "targetName": "JournalLineID",
+        "targetType": "BIGINT",
+        "type": "BIGINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "JournalID",
+        "nullable": false,
+        "targetName": "JournalID",
+        "targetType": "BIGINT",
+        "type": "BIGINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "LineNumber",
+        "nullable": false,
+        "targetName": "LineNumber",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "GLAccountID",
+        "nullable": false,
+        "targetName": "GLAccountID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CostCenterID",
+        "nullable": false,
+        "targetName": "CostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "DebitAmount",
+        "nullable": false,
+        "targetName": "DebitAmount",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreditAmount",
+        "nullable": false,
+        "targetName": "CreditAmount",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "NetAmount",
+        "nullable": true,
+        "targetName": "LocalCurrencyCode",
+        "targetType": "CHAR",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "LocalCurrencyCode",
+        "nullable": false,
+        "targetName": "LocalCurrencyAmount",
+        "targetType": "DECIMAL",
+        "type": "CHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "LocalCurrencyAmount",
+        "nullable": true,
+        "targetName": "ExchangeRate",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ExchangeRate",
+        "nullable": true,
+        "targetName": "Description",
+        "targetType": "NVARCHAR",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "Description",
+        "nullable": true,
+        "targetName": "ReferenceNumber",
+        "targetType": "VARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ReferenceNumber",
+        "nullable": true,
+        "targetName": "PartnerEntityCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PartnerEntityCode",
+        "nullable": true,
+        "targetName": "PartnerAccountID",
+        "targetType": "INT",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PartnerAccountID",
+        "nullable": true,
+        "targetName": "StatisticalQuantity",
+        "targetType": "DECIMAL",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "StatisticalQuantity",
+        "nullable": true,
+        "targetName": "StatisticalUOM",
+        "targetType": "VARCHAR",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "StatisticalUOM",
+        "nullable": true,
+        "targetName": "AllocationRuleID",
+        "targetType": "INT",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationRuleID",
+        "nullable": true,
+        "targetName": "CreatedDateTime",
+        "targetType": "",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreatedDateTime",
+        "nullable": false,
+        "type": "DATETIME2"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.ConsolidationJournalLine",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "ConsolidationJournalLine",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.ConsolidationJournalLine",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "ConsolidationJournalLine",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

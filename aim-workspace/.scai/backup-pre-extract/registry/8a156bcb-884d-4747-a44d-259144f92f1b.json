@@ -1,0 +1,128 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM",
+          "SELECT - JOIN"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "341a180c-0f3a-4066-8637-ccb6e60b45a7"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/function/tvf_explodecostcenterhierarchy"
+    },
+    "converted": {
+      "checksum": "1ea82684aac99c7d0e2830ca6f321224",
+      "path": "snowflake/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql"
+    },
+    "source": {
+      "checksum": "8a5e984fcb1fa2efc1d8124282d6e743",
+      "path": "source/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql"
+    }
+  },
+  "id": "8a156bcb-884d-4747-a44d-259144f92f1b",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-TS0204",
+      "count": 1,
+      "severity": "high"
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 2,
+    "wave": 1,
+    "waveRank": 3
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@RootCostCenterID",
+          "required": false,
+          "targetName": "ROOTCOSTCENTERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@MaxDepth",
+          "required": false,
+          "targetName": "MAXDEPTH",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@IncludeInactive",
+          "required": false,
+          "targetName": "INCLUDEINACTIVE",
+          "targetType": "BOOLEAN",
+          "type": "BIT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@AsOfDate",
+          "required": false,
+          "targetName": "ASOFDATE",
+          "targetType": "DATE",
+          "type": "DATE"
+        }
+      ],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.tvf_ExplodeCostCenterHierarchy(INT,INT,BIT,DATE)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "tvf_ExplodeCostCenterHierarchy",
+    "objectType": "function",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.tvf_ExplodeCostCenterHierarchy(INT,INT,BOOLEAN,DATE)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "tvf_ExplodeCostCenterHierarchy",
+    "objectType": "function",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

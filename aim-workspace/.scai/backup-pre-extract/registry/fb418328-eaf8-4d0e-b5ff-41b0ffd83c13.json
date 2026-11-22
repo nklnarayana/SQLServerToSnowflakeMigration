@@ -1,0 +1,240 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/function/tvf_getbudgetvariance"
+    },
+    "converted": {
+      "checksum": "889c7fde7ebc693a9073cf70222abe50",
+      "path": "snowflake/financial_planning/planning/function/tvf_getbudgetvariance.sql"
+    },
+    "source": {
+      "checksum": "c6c04c31765dca57702ed9a9dfdf89ed",
+      "path": "source/financial_planning/planning/function/tvf_getbudgetvariance.sql"
+    }
+  },
+  "id": "fb418328-eaf8-4d0e-b5ff-41b0ffd83c13",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0012",
+      "count": 17
+    },
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 1
+    },
+    {
+      "code": "SSC-PRF-TS0001",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@BaseBudgetHeaderID",
+          "required": true,
+          "targetName": "BASEBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ComparisonBudgetHeaderID",
+          "required": true,
+          "targetName": "COMPARISONBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@FiscalYear",
+          "required": false,
+          "targetName": "P_FISCALYEAR",
+          "targetType": "SMALLINT",
+          "type": "SMALLINT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@CostCenterID",
+          "required": false,
+          "targetName": "P_COSTCENTERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@AccountType",
+          "required": false,
+          "targetName": "P_ACCOUNTTYPE",
+          "targetType": "STRING",
+          "type": "CHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@VarianceThresholdPct",
+          "required": false,
+          "targetName": "VARIANCETHRESHOLDPCT",
+          "targetType": "DECIMAL",
+          "type": "DECIMAL"
+        }
+      ],
+      "returns": [
+        {
+          "name": "GLAccountID",
+          "targetType": "UNKNOWN",
+          "type": "INT"
+        },
+        {
+          "name": "AccountNumber",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "AccountName",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "AccountType",
+          "type": "CHAR"
+        },
+        {
+          "name": "CostCenterID",
+          "type": "INT"
+        },
+        {
+          "name": "CostCenterCode",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "CostCenterName",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "FiscalPeriodID",
+          "type": "INT"
+        },
+        {
+          "name": "FiscalYear",
+          "type": "SMALLINT"
+        },
+        {
+          "name": "FiscalMonth",
+          "type": "TINYINT"
+        },
+        {
+          "name": "PeriodName",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "BudgetAmount",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "ComparisonAmount",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "VarianceAmount",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "VariancePercentage"
+        },
+        {
+          "name": "VarianceStatus",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "ExceedsThreshold",
+          "type": "EXACTNUMERIC"
+        }
+      ]
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.tvf_GetBudgetVariance(INT,INT,SMALLINT,INT,CHAR,DECIMAL)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "tvf_GetBudgetVariance",
+    "objectType": "function",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.tvf_GetBudgetVariance(INT,INT,SMALLINT,INT,STRING,DECIMAL)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "tvf_GetBudgetVariance",
+    "objectType": "function",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

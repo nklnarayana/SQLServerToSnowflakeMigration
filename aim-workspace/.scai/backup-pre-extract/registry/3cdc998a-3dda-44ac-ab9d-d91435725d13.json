@@ -1,0 +1,34 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "exclusion": [],
+      "status": "failed"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "04e8f1ca-14ee-4f42-b004-2254463f671b"
+    ]
+  },
+  "extensions": {},
+  "id": "3cdc998a-3dda-44ac-ab9d-d91435725d13",
+  "inScope": true,
+  "isMissing": true,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "source": {
+    "canonicalName": "FINANCIAL_PLANNING.dbo.OPENXML",
+    "database": "FINANCIAL_PLANNING",
+    "name": "OPENXML",
+    "objectType": "other",
+    "schema": "dbo"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

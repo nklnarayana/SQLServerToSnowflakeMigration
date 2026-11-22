@@ -1,0 +1,329 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": true,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "INSERT",
+          "SELECT - FROM",
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8a156bcb-884d-4747-a44d-259144f92f1b",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM"
+        ]
+      },
+      {
+        "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM",
+          "INSERT"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "d521416d-e8b8-4e42-b024-8811a36af74b",
+        "isMissing": true,
+        "relationTypes": [
+          "UPDATE"
+        ]
+      },
+      {
+        "id": "2bc2277c-6529-42be-a255-8d0d3dff5198",
+        "isMissing": false,
+        "relationTypes": []
+      },
+      {
+        "id": "fb2dcb74-b03d-4b09-9347-d39d23179fec",
+        "isMissing": false,
+        "relationTypes": []
+      },
+      {
+        "id": "7a875570-3f93-48c3-a03e-a7f90e7c994c",
+        "isMissing": false,
+        "relationTypes": []
+      }
+    ],
+    "hasTransitiveMissingDependencies": true,
+    "requiredBy": [
+      "6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/procedure/usp_processbudgetconsolidation"
+    },
+    "converted": {
+      "checksum": "31c387474e3d2c70f0e6db097e351d85",
+      "path": "snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql"
+    },
+    "source": {
+      "checksum": "9db5a95ca54a5b99a377dcbf2fb0e158",
+      "path": "source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql"
+    }
+  },
+  "id": "341a180c-0f3a-4066-8637-ccb6e60b45a7",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-TS0089",
+      "count": 1,
+      "severity": "low"
+    },
+    {
+      "code": "SSC-EWI-TS0115",
+      "count": 1,
+      "severity": "high"
+    },
+    {
+      "code": "SSC-EWI-0073",
+      "count": 4,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-TS0037",
+      "count": 3,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-0058",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-TS0106",
+      "count": 3,
+      "severity": "low"
+    },
+    {
+      "code": "SSC-EWI-0021",
+      "count": 2,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-TS0121",
+      "count": 3,
+      "severity": "high"
+    },
+    {
+      "code": "SSC-EWI-0125",
+      "count": 2,
+      "severity": "low"
+    },
+    {
+      "code": "SSC-EWI-TS0219",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-TS0083",
+      "count": 2,
+      "severity": "low"
+    },
+    {
+      "code": "SSC-FDM-TS0013",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0029",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-0021",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-0012",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0019",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0186",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0057",
+      "count": 4
+    },
+    {
+      "code": "SSC-FDM-0131",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0023",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0082",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-0007",
+      "count": 1
+    },
+    {
+      "code": "SSC-PRF-0003",
+      "count": 4
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@SourceBudgetHeaderID",
+          "required": true,
+          "targetName": "SOURCEBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@TargetBudgetHeaderID",
+          "required": false,
+          "targetName": "TARGETBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ConsolidationType",
+          "required": false,
+          "targetName": "CONSOLIDATIONTYPE",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@IncludeEliminations",
+          "required": false,
+          "targetName": "INCLUDEELIMINATIONS",
+          "targetType": "BOOLEAN",
+          "type": "BIT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@RecalculateAllocations",
+          "required": false,
+          "targetName": "RECALCULATEALLOCATIONS",
+          "targetType": "BOOLEAN",
+          "type": "BIT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ProcessingOptions",
+          "required": false,
+          "targetName": "PROCESSINGOPTIONS",
+          "targetType": "VARIANT",
+          "type": "XML"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@UserID",
+          "required": false,
+          "targetName": "USERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@DebugMode",
+          "required": false,
+          "targetName": "DEBUGMODE",
+          "targetType": "BOOLEAN",
+          "type": "BIT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@RowsProcessed",
+          "required": false,
+          "targetName": "ROWSPROCESSED",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@ErrorMessage",
+          "required": false,
+          "targetName": "ERRORMESSAGE",
+          "targetType": "STRING",
+          "type": "NVARCHAR"
+        }
+      ],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.usp_ProcessBudgetConsolidation(INT,INT,VARCHAR,BIT,BIT,XML,INT,BIT,INT,NVARCHAR)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "usp_ProcessBudgetConsolidation",
+    "objectType": "procedure",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.usp_ProcessBudgetConsolidation(INT,INT,STRING,BOOLEAN,BOOLEAN,VARIANT,INT,BOOLEAN,INT,STRING)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "usp_ProcessBudgetConsolidation",
+    "objectType": "procedure",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "32a0d055-6833-4e88-b89f-d42654961d95",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary"
+    },
+    "converted": {
+      "checksum": "17b17ecb286c0467c0fc7287297cecd9",
+      "path": "snowflake/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql"
+    },
+    "source": {
+      "checksum": "56671c06b5d91ab9c703ca5fc594d188",
+      "path": "source/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql"
+    }
+  },
+  "id": "963ccd8f-332e-4882-aa71-6af2da06071f",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.IX_vw_BudgetConsolidationSummary",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "IX_vw_BudgetConsolidationSummary",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.IX_vw_BudgetConsolidationSummary",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "IX_vw_BudgetConsolidationSummary",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

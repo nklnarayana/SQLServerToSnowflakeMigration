@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey"
+    },
+    "converted": {
+      "checksum": "24f461a9443af112ba252fa279054343",
+      "path": "snowflake/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql"
+    },
+    "source": {
+      "checksum": "c3a47a1cc519922eec0e5071085387b2",
+      "path": "source/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql"
+    }
+  },
+  "id": "dfb42343-829c-4f0e-902c-4c1086ec42e5",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.UQ_BudgetLineItem_NaturalKey",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "UQ_BudgetLineItem_NaturalKey",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.UQ_BudgetLineItem_NaturalKey",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "UQ_BudgetLineItem_NaturalKey",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

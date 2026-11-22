@@ -1,0 +1,167 @@
+Bash command `cd /Users/lakshmi/Projects/snowflake-migration/aim-workspace && python3 -c "
+import json
+d=json.load(open('artifacts/assessment/conversion-issues.json'))
+print('total_instances',d['total_instances'],'distinct_pairs',d['distinct_pairs'])
+print('units_missing_converted',d['units_missing_converted'])
+print('count_mismatches',d['count_mismatches'])
+for p in d['panels']:
+    print('--- PANEL',p['id'],p['label'],'instances',p['instance_count'],'pairs',p['distinct_pairs'])
+    for r in p['rows']:
+        print('   ROW keys:',list(r.keys()))
+        print('   ',{k:r[k] for k in r if k in ('code','element','category','severity','count','problem_description','recommended_fix')})
+"` with description `Dump conversion issues panels and rows` returned output: total_instances 78 distinct_pairs 37
+units_missing_converted 0
+count_mismatches [{'code_unit_id': '6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e', 'code': 'SSC-EWI-0021', 'registry_count': 1, 'marker_count': 0}]
+--- PANEL summary Summary instances 78 pairs 37
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0108', 'count': 17, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 6, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0021', 'count': 5, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0037', 'count': 3, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0106', 'count': 3, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0121', 'count': 3, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0021', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0125', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0032', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0083', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0089', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0089', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0123', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0058', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0068', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0082', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0086', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0094', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0115', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0133', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0204', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0219', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0225', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+--- PANEL Table Table instances 1 pairs 1
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+--- PANEL View View instances 10 pairs 5
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 6, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0041', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0082', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+--- PANEL Function Function instances 2 pairs 2
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0068', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0204', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+--- PANEL Procedure Procedure instances 65 pairs 29
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0108', 'count': 17, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0021', 'count': 5, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0037', 'count': 3, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0106', 'count': 3, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0121', 'count': 3, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0021', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0125', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0032', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0083', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0089', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0089', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0123', 'count': 2, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0058', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-0073', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0075', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0086', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0094', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0115', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0133', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0219', 'count': 1, 'problem_description': '', 'recommended_fix': ''}
+   ROW keys: ['rank', 'code', 'name', 'issue_type', 'description', 'count', 'percent', 'object_types', 'objects_with_only_this_ewi', 'total_partial_objects', 'problem_description', 'recommended_fix', 'sample']
+    {'code': 'SSC-EWI-TS0225', 'count': 1, 'problem_description': '', 'recommended_fix': ''}

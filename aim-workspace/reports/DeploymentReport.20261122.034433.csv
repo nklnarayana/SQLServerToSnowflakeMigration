@@ -1,0 +1,11 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+AIM_DB.PUBLIC.FOR_XML_UDF,Function,Deployed,,AIM_DB,PUBLIC,AIM_DB.PUBLIC.FOR_XML_UDF,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/AIM_DB/schemas/PUBLIC
+Planning.CostCenter_View,View,Failed,"Error: JavaScript execution error: Uncaught Execution of multiple statements failed on statement ""CREATE OR REPLACE VIEW Plannin..."" (at line 2, position 0).
+SQL compilation error:
+Schema 'AIM_DB.PLANNING' does not exist or not authorized. Your primary role ACCOUNTADMIN or one of your secondary roles must have USAGE or any other privilege granted on SCHEMA AIM_DB.PLANNING. in SYSTEM$MULTISTMT at '    throw `Execution of multiple statements failed on statement {0} (at line {1}, position {2}).`.replace('{1}', LINES[i])' position 4
+stackstrace: 
+SYSTEM$MULTISTMT line: 10 SqlState: P0000, VendorCode: 100132, QueryId: 01c892c0-030a-0cc4-0000-001353ee563d",AIM_DB,Planning,AIM_DB.Planning.CostCenter_View,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/AIM_DB/schemas/PLANNING
+AIM_DB.PUBLIC.HIERARCHY_GET_LEVEL_UDF,Function,Deployed,,AIM_DB,PUBLIC,AIM_DB.PUBLIC.HIERARCHY_GET_LEVEL_UDF,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/AIM_DB/schemas/PUBLIC
+AIM_DB.PUBLIC.OPENJSON_UDF,Function,Deployed,,AIM_DB,PUBLIC,AIM_DB.PUBLIC.OPENJSON_UDF,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/AIM_DB/schemas/PUBLIC
+financial_planning.Planning.vw_AllocationRuleTargets,View,Failed,"Unresolved EWI marker(s): SSC-EWI-TS0041 (lines 23, 25, 27, 29, 34, 36, 49, 56, 60), SSC-EWI-TS0082 (line 47) - resolve before deploying",financial_planning,Planning,financial_planning.Planning.vw_AllocationRuleTargets,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.vw_BudgetConsolidationSummary,View,Deployed,,financial_planning,Planning,financial_planning.Planning.vw_BudgetConsolidationSummary,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING

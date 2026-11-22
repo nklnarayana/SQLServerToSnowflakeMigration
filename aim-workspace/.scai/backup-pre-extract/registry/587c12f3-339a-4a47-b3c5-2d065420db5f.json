@@ -1,0 +1,227 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "04e8f1ca-14ee-4f42-b004-2254463f671b",
+      "163129a6-c4a0-4782-9b70-a8bbb647f264",
+      "32a0d055-6833-4e88-b89f-d42654961d95",
+      "4f435dc1-0e76-4d45-9a98-8cebea10e5f1",
+      "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+      "6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e",
+      "a09d4298-71c0-416f-94ad-b596c978f7e0",
+      "e90d3531-dc33-4d8c-86fc-fd1dc3e52279",
+      "fb418328-eaf8-4d0e-b5ff-41b0ffd83c13",
+      "fd7e6670-6514-4939-bbee-3baead22d98f",
+      "fec044c6-5203-4597-84fa-9549a2c04bef"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/fiscalperiod"
+    },
+    "converted": {
+      "checksum": "dcd2133f03f7d7393932c8f1d62a5820",
+      "path": "snowflake/financial_planning/planning/table/fiscalperiod.sql"
+    },
+    "source": {
+      "checksum": "aaac5b197294efaef037125eb045f3d0",
+      "path": "source/financial_planning/planning/table/fiscalperiod.sql"
+    }
+  },
+  "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0046",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "FiscalPeriodID",
+        "nullable": false,
+        "targetName": "FiscalPeriodID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalYear",
+        "nullable": false,
+        "targetName": "FiscalYear",
+        "targetType": "SMALLINT",
+        "type": "SMALLINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalQuarter",
+        "nullable": false,
+        "targetName": "FiscalQuarter",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalMonth",
+        "nullable": false,
+        "targetName": "FiscalMonth",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PeriodName",
+        "nullable": false,
+        "targetName": "PeriodName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PeriodStartDate",
+        "nullable": false,
+        "targetName": "PeriodStartDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PeriodEndDate",
+        "nullable": false,
+        "targetName": "PeriodEndDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsClosed",
+        "nullable": false,
+        "targetName": "IsClosed",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ClosedByUserID",
+        "nullable": true,
+        "targetName": "ClosedByUserID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ClosedDateTime",
+        "nullable": true,
+        "targetName": "ClosedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsAdjustmentPeriod",
+        "nullable": false,
+        "targetName": "IsAdjustmentPeriod",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "WorkingDays",
+        "nullable": true,
+        "targetName": "WorkingDays",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreatedDateTime",
+        "nullable": false,
+        "targetName": "CreatedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ModifiedDateTime",
+        "nullable": false,
+        "targetName": "ModifiedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RowVersionStamp",
+        "nullable": false,
+        "targetName": "RowVersionStamp",
+        "targetType": "BINARY",
+        "type": "ROWVERSION"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.FiscalPeriod",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "FiscalPeriod",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.FiscalPeriod",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "FiscalPeriod",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

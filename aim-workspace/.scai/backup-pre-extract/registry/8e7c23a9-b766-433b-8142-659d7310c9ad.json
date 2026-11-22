@@ -1,0 +1,316 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8e7c23a9-b766-433b-8142-659d7310c9ad",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "28dafc15-8dcc-4a76-b077-27bddf421275",
+      "9cf31ef4-0461-4c2b-9112-b4fe61dd576d",
+      "d68b2d69-2539-471d-a5d1-184475c2797f",
+      "f6ea4fac-78c8-4014-8da2-1c3cb9931501"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/allocationrule"
+    },
+    "converted": {
+      "checksum": "ffa93b187b708fae2712d31e77a0a47e",
+      "path": "snowflake/financial_planning/planning/table/allocationrule.sql"
+    },
+    "source": {
+      "checksum": "e85c668fc4951458791108097393dae1",
+      "path": "source/financial_planning/planning/table/allocationrule.sql"
+    }
+  },
+  "id": "8e7c23a9-b766-433b-8142-659d7310c9ad",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 2
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 2,
+    "wave": 1,
+    "waveRank": 3
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "AllocationRuleID",
+        "nullable": false,
+        "targetName": "AllocationRuleID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleCode",
+        "nullable": false,
+        "targetName": "RuleCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleName",
+        "nullable": false,
+        "targetName": "RuleName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleDescription",
+        "nullable": true,
+        "targetName": "RuleDescription",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleType",
+        "nullable": false,
+        "targetName": "RuleType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationMethod",
+        "nullable": false,
+        "targetName": "AllocationMethod",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "SourceCostCenterID",
+        "nullable": true,
+        "targetName": "SourceCostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "SourceCostCenterPattern",
+        "nullable": true,
+        "targetName": "SourceCostCenterPattern",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "SourceAccountPattern",
+        "nullable": true,
+        "targetName": "SourceAccountPattern",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetSpecification",
+        "nullable": false,
+        "targetName": "TargetSpecification",
+        "targetType": "VARIANT",
+        "type": "XML"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationBasis",
+        "nullable": true,
+        "targetName": "AllocationBasis",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationPercentage",
+        "nullable": true,
+        "targetName": "AllocationPercentage",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RoundingMethod",
+        "nullable": false,
+        "targetName": "RoundingMethod",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RoundingPrecision",
+        "nullable": false,
+        "targetName": "RoundingPrecision",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "MinimumAmount",
+        "nullable": true,
+        "targetName": "MinimumAmount",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ExecutionSequence",
+        "nullable": false,
+        "targetName": "ExecutionSequence",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "DependsOnRuleID",
+        "nullable": true,
+        "targetName": "DependsOnRuleID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EffectiveFromDate",
+        "nullable": false,
+        "targetName": "EffectiveFromDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EffectiveToDate",
+        "nullable": true,
+        "targetName": "EffectiveToDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsActive",
+        "nullable": false,
+        "targetName": "IsActive",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreatedByUserID",
+        "nullable": true,
+        "targetName": "CreatedByUserID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreatedDateTime",
+        "nullable": false,
+        "targetName": "CreatedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ModifiedByUserID",
+        "nullable": true,
+        "targetName": "ModifiedByUserID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ModifiedDateTime",
+        "nullable": false,
+        "targetName": "ModifiedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.AllocationRule",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "AllocationRule",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.AllocationRule",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "AllocationRule",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

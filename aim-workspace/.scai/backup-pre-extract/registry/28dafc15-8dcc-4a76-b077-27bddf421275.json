@@ -1,0 +1,271 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8e7c23a9-b766-433b-8142-659d7310c9ad",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "9cf31ef4-0461-4c2b-9112-b4fe61dd576d"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/view/vw_allocationruletargets"
+    },
+    "converted": {
+      "checksum": "28aedb6c0de27eb39e63364f1955450d",
+      "path": "snowflake/financial_planning/planning/view/vw_allocationruletargets.sql"
+    },
+    "source": {
+      "checksum": "6589f5f3ad08e9cdd297d7ecf625197f",
+      "path": "source/financial_planning/planning/view/vw_allocationruletargets.sql"
+    }
+  },
+  "id": "28dafc15-8dcc-4a76-b077-27bddf421275",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-TS0041",
+      "count": 9,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-TS0082",
+      "count": 1,
+      "severity": "critical"
+    },
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationRuleID",
+        "nullable": true,
+        "targetName": "AllocationRuleID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleCode",
+        "nullable": true,
+        "targetName": "RuleCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleName",
+        "nullable": true,
+        "targetName": "RuleName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleType",
+        "nullable": true,
+        "targetName": "RuleType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationMethod",
+        "nullable": true,
+        "targetName": "AllocationMethod",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ExecutionSequence",
+        "nullable": true,
+        "targetName": "ExecutionSequence",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetCostCenterID",
+        "nullable": true,
+        "targetName": "TargetCostCenterID"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetCostCenterCode",
+        "nullable": true,
+        "targetName": "TargetCostCenterCode"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetAllocationPct",
+        "nullable": true,
+        "targetName": "TargetAllocationPct"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetPriority",
+        "nullable": true,
+        "targetName": "TargetPriority"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountFilter",
+        "nullable": true,
+        "targetName": "AccountFilter"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ExcludePattern",
+        "nullable": true,
+        "targetName": "ExcludePattern"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "HasConditions",
+        "nullable": true,
+        "targetName": "HasConditions"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ConditionsXml",
+        "nullable": true,
+        "targetName": "ConditionsXml"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetCostCenterName",
+        "nullable": true,
+        "targetName": "TargetCostCenterName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetParentCostCenterID",
+        "nullable": true,
+        "targetName": "TargetParentCostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetIsActive",
+        "nullable": true,
+        "targetName": "TargetIsActive",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EffectiveFromDate",
+        "nullable": true,
+        "targetName": "EffectiveFromDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EffectiveToDate",
+        "nullable": true,
+        "targetName": "EffectiveToDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "RuleIsActive",
+        "nullable": true,
+        "targetName": "RuleIsActive",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.vw_AllocationRuleTargets",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "vw_AllocationRuleTargets",
+    "objectType": "view",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.vw_AllocationRuleTargets",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "vw_AllocationRuleTargets",
+    "objectType": "view",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

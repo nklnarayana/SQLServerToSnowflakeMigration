@@ -1,0 +1,34 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "exclusion": [],
+      "status": "failed"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "fec044c6-5203-4597-84fa-9549a2c04bef"
+    ]
+  },
+  "extensions": {},
+  "id": "ff1c7af3-6da5-4d75-befa-ebe2fabbf029",
+  "inScope": true,
+  "isMissing": true,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "source": {
+    "canonicalName": "FINANCIAL_PLANNING.dbo.#MergeOutput",
+    "database": "FINANCIAL_PLANNING",
+    "name": "#MergeOutput",
+    "objectType": "other",
+    "schema": "dbo"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

@@ -1,0 +1,46 @@
+{
+  "codeStatus": {
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "8968778a-95bb-4690-aa80-558680e1ea71"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "converted": {
+      "checksum": "7d9bd8e46d97f643f053f5ed76888e02",
+      "path": "snowflake/UDF Helpers/HIERARCHYID_UDF.sql"
+    }
+  },
+  "id": "96d2e023-0fc0-4688-9571-a0f4dfcce2b9",
+  "inScope": true,
+  "isMissing": false,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "target": {
+    "canonicalName": "<%AIM_DB%>.PUBLIC.HIERARCHY_GET_LEVEL_UDF",
+    "database": "<%AIM_DB%>",
+    "name": "HIERARCHY_GET_LEVEL_UDF",
+    "objectType": "function",
+    "schema": "PUBLIC"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

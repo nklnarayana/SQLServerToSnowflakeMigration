@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path"
+    },
+    "converted": {
+      "checksum": "e87fe23905e43aa7e56469dc17512381",
+      "path": "snowflake/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql"
+    },
+    "source": {
+      "checksum": "60e48559cdd34a85b64c501e746581d2",
+      "path": "source/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql"
+    }
+  },
+  "id": "8457e8ae-1296-404e-9984-618879db26c6",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 2
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.SXML_BudgetHeader_ExtendedProperties_Path",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "SXML_BudgetHeader_ExtendedProperties_Path",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.SXML_BudgetHeader_ExtendedProperties_Path",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "SXML_BudgetHeader_ExtendedProperties_Path",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates"
+    },
+    "converted": {
+      "checksum": "90e9d7e1e8f5af8c888c3f197934e2d9",
+      "path": "snowflake/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql"
+    },
+    "source": {
+      "checksum": "f00ebf6541ed39772c076a2d34fd86c3",
+      "path": "source/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql"
+    }
+  },
+  "id": "a09d4298-71c0-416f-94ad-b596c978f7e0",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 1
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.IX_FiscalPeriod_Dates",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "IX_FiscalPeriod_Dates",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.IX_FiscalPeriod_Dates",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "IX_FiscalPeriod_Dates",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

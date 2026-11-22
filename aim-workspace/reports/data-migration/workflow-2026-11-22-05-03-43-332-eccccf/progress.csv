@@ -1,0 +1,46 @@
+TableName,HasBeenPreprocessed,TotalPartitions,PartitionsInExtractionPhase,PartitionsInLoadingPhase,LoadedPartitions,FailedPartitions,ExampleErrorMessage,ExampleWarningMessage
+FINANCIALPLANNING.PLANNING.ALLOCATIONRULE,False,0,0,0,0,0,"Error processing the task '11'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",
+FINANCIALPLANNING.PLANNING.CONSOLIDATIONJOURNAL,False,0,0,0,0,0,"Error processing the task '13'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",
+FINANCIALPLANNING.PLANNING.COSTCENTER,False,0,0,0,0,0,"Error processing the task '12'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",
+FINANCIALPLANNING.PLANNING.GLACCOUNT,False,0,0,0,0,0,"Error processing the task '17'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]SSL Provider: [OpenSSL library could not be loaded, make sure OpenSSL 1.0, 1.1, or 3.0 is installed]
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]SSL Provider: [OpenSSL library could not be loaded, make sure OpenSSL 1.0, 1.1, or 3.0 is installed]",
+FINANCIALPLANNING.PLANNING.FISCALPERIOD,False,0,0,0,0,0,"Error processing the task '10'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]SSL Provider: [OpenSSL library could not be loaded, make sure OpenSSL 1.0, 1.1, or 3.0 is installed]
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]SSL Provider: [OpenSSL library could not be loaded, make sure OpenSSL 1.0, 1.1, or 3.0 is installed]",
+FINANCIALPLANNING.PLANNING.BUDGETHEADER,False,0,0,0,0,0,"Error processing the task '15'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",
+FINANCIALPLANNING.PLANNING.COSTCENTERHISTORY,False,0,0,0,0,0,"Error processing the task '18'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",
+FINANCIALPLANNING.PLANNING.BUDGETLINEITEM,False,0,0,0,0,0,"Error processing the task '14'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",
+FINANCIALPLANNING.PLANNING.CONSOLIDATIONJOURNALLINE,False,0,0,0,0,0,"Error processing the task '16'. Failed exporting data from the 'sqlserver' engine using the 'RegularExtractionStrategy' data source: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection
+Please check the database connection and the query.
+
+Exception Type: OperationalError
+Exception Message: Driver Error: Client unable to establish connection; DDBC Error: [Microsoft]Client unable to establish connection",

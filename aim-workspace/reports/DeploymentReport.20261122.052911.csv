@@ -1,0 +1,9 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+financial_planning.Planning.tvf_ExplodeCostCenterHierarchy,Function,Deployed,,financial_planning,Planning,financial_planning.Planning.tvf_ExplodeCostCenterHierarchy,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.tvf_GetBudgetVariance,Function,Failed,"Error: SQL compilation error:
+syntax error line 35 at position 0 unexpected 'COMMENT'. SqlState: 42000, VendorCode: 1003, QueryId: 01c89329-030a-0ce4-0013-53ee00033ad6",financial_planning,Planning,financial_planning.Planning.tvf_GetBudgetVariance,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
+financial_planning.Planning.fn_GetAllocationFactor,Function,Failed,"Error: JavaScript execution error: Uncaught Execution of multiple statements failed on statement ""CREATE OR REPLACE FUNCTION Pla..."" (at line 14, position 0).
+SQL compilation error: error line 80 at position 21
+invalid identifier 'SOURCETOTAL' in SYSTEM$MULTISTMT at '    throw `Execution of multiple statements failed on statement {0} (at line {1}, position {2}).`.replace('{1}', LINES[i])' position 4
+stackstrace: 
+SYSTEM$MULTISTMT line: 10 SqlState: P0000, VendorCode: 100132, QueryId: 01c89329-030a-0cc6-0000-001353eea8e5",financial_planning,Planning,financial_planning.Planning.fn_GetAllocationFactor,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING

@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy"
+    },
+    "converted": {
+      "checksum": "8a67d2814b1aac7e407c0d7b1139e1d7",
+      "path": "snowflake/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql"
+    },
+    "source": {
+      "checksum": "dc87a0843dd10be46a23f3ed3b4f0212",
+      "path": "source/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql"
+    }
+  },
+  "id": "bf370666-0bf3-4da6-9172-75f006b8838c",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 2
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.IX_CostCenter_Hierarchy",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "IX_CostCenter_Hierarchy",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.IX_CostCenter_Hierarchy",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "IX_CostCenter_Hierarchy",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

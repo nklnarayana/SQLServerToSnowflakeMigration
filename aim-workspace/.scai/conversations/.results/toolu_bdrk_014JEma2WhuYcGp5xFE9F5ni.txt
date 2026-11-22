@@ -1,0 +1,383 @@
+1... ---
+2... name: add-code-units
+3... description: Add local source code files to a migration project using scai code add. Use when source SQL files are already available on disk instead of extracting from a live database. Triggers: add code, import files, local files, add source, scai code add.
+4... parent_skill: register-code-units
+5... license: Proprietary. See License-Skills for complete terms
+6... ---
+7... 
+8... # Add Local Source Code
+9... 
+10... ## On Entry
+11... 
+12... Tell the user:
+13... > **Importing local SQL files.**
+14... >
+15... > I'll handle this for you — importing your local SQL files and organizing them by type into `source/`, ready for conversion. It's a single automated step; you won't need to copy, arrange, or move anything yourself.
+16... 
+17... ## Prerequisites
+18... 
+19... - Migration project initialized (`scai init`)
+20... - Local directory containing SQL source files
+21... 
+22... ## Workflow
+23... 
+24... ### Step 1: Get Source Path
+25... 
+26... If the session's `workload` is `dbt`, load `dbt.md` instead of Steps 1–4, then rejoin at Step 5.
+27... 
+28... Otherwise, ask the user for the path to their source SQL files:
+29... 
+30... > "Where are your SQL source files located? Please provide the full path to the directory."
+31... 
+32... ### Step 2: Annotate Multi-Object Files with sc-tags
+33... 
+34... `scai code add` uses the arrange engine to split files into one object per code unit. For non-T-SQL dialects the engine splits on `/* <sc-...> */` boundary tags. Before importing, call the `split_code` MCP tool to detect files that need tags (at least one top-level object and no SC tag yet) and inject those tags automatically. Files that already carry SC tags, such as Teradata extraction-script output, are copied unchanged.
+35... 
+36... ```
+37... split_code(input_path="<INPUT_PATH>")
+38... ```
+39... 
+40... - If no file needs tags, the tool says so and you can skip ahead to Step 3 using `<INPUT_PATH>` directly.
+41... - Otherwise the tool copies all files to `artifacts/source_split/` (leaving out macOS `__MACOSX/` / `._*` metadata), injects the sc-tags, verifies the result, and tells you to use `artifacts/source_split` as the input for Step 3.
+42... - If it lists files that still have no SC tag, apply the fix it gives for each before Step 3 — do not fall back to `--code-already-split`.
+43... 
+44... The tool handles the full detect → inject → verify cycle in one call. It is OS-agnostic and does not require Python.
+45... 
+46... **Example** — what the tool injects before each object in a multi-object file:
+47... 
+48... ```sql
+49... /* <sc-table>sales.public.customers</sc-table> */
+50... CREATE TABLE sales.public.customers (
+51...   id INT,
+52...   name VARCHAR(100)
+53... );
+54... 
+55... /* <sc-view>sales.public.v_active_customers</sc-view> */
+56... CREATE VIEW sales.public.v_active_customers AS
+57... SELECT * FROM sales.public.customers WHERE active = 1;
+58... ```
+59... 
+60... > **T-SQL note:** T-SQL files do not need this step — the engine has a native T-SQL splitter. Skip Step 2 for T-SQL source files.
+61... 
+62... ### Step 2b: Give SQL Server files their database
+63... 
+64... **SQL Server only; skip for every other dialect and for dbt.** An object belongs to the database
+65... named by the `USE` in effect where it is defined. A file with no `USE` puts its objects in
+66... `defaultdb`, where same-named objects from different databases collide and cross-database
+67... references (`SALES.dbo.ORDERS`) find no unit. Give `code add` each file's database instead:
+68... `--database <NAME>` for the whole input, or `--database-map <FILE>` per path. It writes the
+69... `USE` into the engine's copy only (the user's files and `artifacts/source_raw/` stay as they were)
+70... and records the assignment under `.scai/code-add/`.
+71... 
+72... 1. Count the files that already name their database:
+73...    `grep -rliE '^[[:space:]]*USE[[:space:]]' <INPUT_PATH> | wc -l` against the `.sql` count (UTF-16
+74...    files do not match `grep`; check those by opening them). If every file has one, skip to Step 3. A file's own `USE` always wins over an assignment.
+75... 2. Collect the evidence for the rest, never guessing a name:
+76...    - **Layout:** top-level folders or file-name prefixes per database (`<DB>/…`, `<DB>_db__…`), or a
+77...      `.sqlproj` (the engine binds those itself; leave them unassigned).
+78...    - **References:** the first part of three-part names in the code
+79...      (`grep -rhoiE '\[?[A-Za-z_][A-Za-z0-9_]*\]?\.\[?[A-Za-z_][A-Za-z0-9_]*\]?\.\[?[A-Za-z_][A-Za-z0-9_]*' <INPUT_PATH> | cut -d. -f1 | sort | uniq -c`),
+80...      SSIS connection `Initial Catalog` values, deploy scripts, and the source connection's databases
+81...      when one is configured.
+82... 3. Classify the input and act:
+83...    - **S1, layout names the databases:** each folder or prefix matches a database the references or
+84...      the source name. Write the map (one rule per folder or prefix, first match wins) to
+85...      `.scai/config/database-map.json` (not under `artifacts/`, which a failed add only cleans when it
+86...      was empty), e.g. `{"databases": [{"path": "**/SALES_ARCHIVE_db__*", "database":
+87...      "SALES_ARCHIVE"}, {"path": "SALES", "database": "SALES"}]}`. Put the narrower
+88...      rules first. Show the user the folder → database table and ask with `ask_user_question` to
+89...      confirm or correct it.
+90...    - **One database, flat dump:** ask for the database's name and pass `--database <NAME>`. The
+91...      answer is a name: when the evidence suggests names (a three-part-name prefix, the source
+92...      connection's databases), offer them as `ask_user_question` options; when it suggests none,
+93...      ask in a plain message and wait for the typed name, as Step 1 asks for the path. Leaving the
+94...      files without a database is never the only option offered: it puts them in `defaultdb`.
+95...    - **S2, several databases, no layout:** propose what the references support, file by file, and
+96...      ask. Never assign a database the evidence does not name.
+97...    - **S6, a deployment merged or renamed databases** (folders say `STAGE` but file prefixes say
+98...      `STAGE` and `STAGE_JL`): ask which model is migrated, the original databases (prefix
+99...      rules) or the deployed ones (folder rules). Code that references the deployed names binds
+100...      only under the deployed model; copies that collide inside a merged database are then S4.
+101...    - **S5, environment copies** (`SALES_DEV`, `SALES_QA`, `SALES_PROD`): ask whether to migrate one
+102...      environment (map only its folder and leave the others out of the input) or all of them as
+103...      separate databases.
+104... 4. Check the plan without changing anything:
+105...    `scai code add -i <INPUT_PATH> --database-map .scai/config/database-map.json --dry-run --json`.
+106...    `result.databaseAssignments` lists each file's `database` and `source` (`map`, `option`, or
+107...    `file` for its own `USE`; `assignedDatabase` then names the assignment it overrode). `ADD0026`
+108...    means a rule matched no file, `ADD0033` that an earlier rule takes every file it matches: fix
+109...    the pattern or move the narrower rule first, never drop the rule silently. Then run Step 3 with
+110...    the same option.
+111... 
+112... ### Step 3: Add Code to Project
+113... 
+114... Use the path returned by `split_code` (or `<INPUT_PATH>` directly if no file needed tags).
+115... 
+116... Launch this call as the next section says: `run_in_background=true`, or set the bash tool `timeout` to at least `900000` (15 minutes), then poll until the command finishes. The default 120 second timeout kills the process during the conversion engine's silent pause and a relaunch starts it over.
+117... 
+118... ```bash
+119... scai code add -i <INPUT_PATH> --json
+120... ```
+121... 
+122... With Step 2b's assignment, add the same `--database <NAME>` or `--database-map <FILE>`.
+123... 
+124... **dbt projects use this form instead** — always, with no exceptions:
+125... 
+126... ```bash
+127... scai code add -i <DBT_PROJECT_PATH> --code-already-split --json
+128... ```
+129... 
+130... Step 2 is skipped for dbt, so the files have no SC tags; `--code-already-split` tells the arrange
+131... engine the input is already one object per file. Without it the command fails with `ADD0010`.
+132... 
+133... This will:
+134... - Copy all files from the input path to `artifacts/source_raw/`
+135... - Arrange and process the source code
+136... - Merge processed output into `source/`
+137... 
+138... **If files already exist** and you need to overwrite:
+139... ```bash
+140... scai code add -i <INPUT_PATH> --overwrite --json
+141... ```
+142... 
+143... #### If the import times out or runs in the background
+144... 
+145... This section covers every `scai code add` the register and conversion skills run: the SQL
+146... add here, ETL, dbt, Power BI and `code-conversion-only`.
+147... 
+148... Launch the command with `run_in_background=true`, or set the bash tool `timeout` to at least `900000` (15 minutes), then poll until it finishes. The default 120 second timeout kills the process during the conversion engine's silent pause and a relaunch starts it over. `--help` and `--list-settings` can stay on the short timeout.
+149... 
+150... A large source can keep `scai code add` running longer than one `bash` call allows. When
+151... the call times out, or returns `Command running in background with ID: <id>` or
+152... `Process moved to background with ID: <id>`, the import has not finished and you have no
+153... envelope yet. A timeout is neither a failure nor a success.
+154... 
+155... - **With an id, wait for the real end, in this turn.** Call
+156...   `bash_output(bash_id=<id>, wait=true)`, and call it again while it reports running, until
+157...   it shows `<status>completed</status>`. Then take its `<exit_code>` and the `--json`
+158...   envelope in its `<stdout>`; those are the import's result. Do not end the turn to say it
+159...   is still importing: this app does not show the turn cortex starts when the job ends, so
+160...   the user would be left with an idle screen. A short line before each wait is fine. Until
+161...   you have the result, say only that it is still running,
+162...   never that it finished or that nothing is wrong.
+163... - **With no id, the run you started has ended or is ending; do not start another.** First
+164...   check whether scai is still running with `pgrep -fl '[s]cai code add'` on macOS/Linux, or
+165...   `Get-CimInstance Win32_Process -Filter "Name LIKE 'scai%' AND CommandLine LIKE '%code add%'"`
+166...   on Windows. Output lists a running import;
+167...   exit code 1 with no output means no import is running, not that the check failed.
+168...   Keep the brackets in `[s]cai`: without them `pgrep -f` matches the shell running the
+169...   check and reports an import that has stopped. Run the check as its own command,
+170...   never chained with the import, whose text the shell's command line would hold. Repeat it until nothing is running, then treat that run as finished: read any
+171...   envelope left in the timed-out output, else run `scai logs --last 5` and read the newest
+172...   `scai_error<YYYYMMDD>.log` as below. A logged error is a failure to report.
+173...   Start another `scai code add` only when the logs show the first one never ran or was cut
+174...   off before it wrote anything, say so to the user first, and launch it with
+175...   `run_in_background=true` so you have an id to wait on as above. Two imports writing
+176...   `source/` at once corrupt it, and one rerun after a crash only repeats the crash.
+177... 
+178... **If the import failed** — a non-zero `<exit_code>`, an envelope with `"success": false`,
+179... or a job that ended with no envelope at all — find out why before you say anything else:
+180... 
+181... 1. An envelope with `"success": false` names the cause in `error.code`, `error.message`
+182...    and `error.suggestion`. Use those.
+183... 2. With no envelope, run `scai logs --last 5`. It prints the log directory (honouring
+184...    `SCAI_LOGS_DIR`) and the newest log files on every OS. Read the end of the newest
+185...    `scai_error<YYYYMMDD>.log` there for the error code and its message.
+186... 3. Tell the user, with the code and message you found (e.g. `CVT0008` or `CRG1001`):
+187...    > **The import failed.** `<code>`: `<message>`. `<what you propose next>`.
+188... 
+189...    Rerunning the same command gives the same failure, so propose a change (the suggestion,
+190...    a fix to the files it names) rather than a retry. Do not continue to the next step, and
+191...    do not treat the import as done.
+192... 
+193... **If the failure is `ADD0029` or `CVT0008` with a `Duplicate groups` entry in `error.details`**,
+194... the input defines the same object in more than one file and nothing was added. Go to
+195... [Duplicated objects](#duplicated-objects). Never add `--keep` or `--dedup keep-first` to get past it
+196... on your own.
+197... 
+198... **If the failure is `ADD0007` after an earlier `scai code add` in this project failed**, and
+199... `migration_status` reports no registered code units, the files it lists are most likely what
+200... that failed run left in `source/`: a failed add rolls back, but it cannot always remove every
+201... file. Keep them. Rerun the same command with `--overwrite` added, which replaces them with this
+202... run's output, and tell the user in one line that you are doing so. Never delete files from
+203... `source/` or `artifacts/` yourself to clear the way. When the project already has registered
+204... units, the files may be code the user added before: ask before you add `--overwrite`.
+205... 
+206... ### Duplicated objects
+207... 
+208... `ADD0029` and `CVT0008` carry `error.details["Duplicate groups"]`: per object, its `id`, `database`,
+209... `databaseStatus` (`unknown` when the copies collide only because no file named a database) and
+210... `copies`, each with `path` (in `source/`), `origin` (`input` or `project`), `inputs` (input file,
+211... `database`, `databaseSource`), `contentHash`, `lines` and `differingLines` against the first copy.
+212... Classify every group from that evidence and the input layout, then propose one action per group:
+213... 
+214... | Situation | Evidence | Action |
+215... |---|---|---|
+216... | S1/S2 different databases | `databaseStatus: unknown`; the copies' input paths sit in different database folders or prefixes, or references name different databases | **Assign databases** (Step 2b) and rerun. Every copy becomes its own unit. |
+217... | S3 byte-identical copies | equal `contentHash` | Same database: `code add` already keeps one. Different databases: assign databases; both stay. |
+218... | S4 versions of one object in one database | known `database`, or a user-confirmed single database; old script, `_v2`, backup, ALTER script | **Keep one**, chosen by the user: the version deployed on the source when there is a connection (`query_source`), else the user's pick. |
+219... | S5 environment copies | database names with environment suffixes, near-identical content | Ask: migrate one environment, or all as separate databases. |
+220... | S6 merged or renamed databases | folder and file-prefix databases disagree | Ask which database model is migrated; inside a merged database, S4 applies. |
+221... | S8 a later add brings a copy of an object already in the project | `ADD0007` on the registered file, or a copy with `origin: project` | Different database: assign it; it becomes a new unit. Same database: S4. A new copy arranged onto the registered file stops with `ADD0007`: replace it only with the user's consent (`--overwrite`), as the `ADD0007` rule says. A copy under another name keeps the registered one with `--keep source/<path>`. |
+222... 
+223... 1. Show the user each group in a short table: object, database, each copy's input file, database
+224...    and `differingLines`, and your classification.
+225... 2. Ask with `ask_user_question`. The options must include **"These are different databases (assign
+226...    databases)"** and **"These are environments of one system"**; offer **"Keep one copy"** only for
+227...    groups classified S4, naming the copy for each.
+228... 3. Apply the answer and rerun the same command:
+229...    - assign databases → Step 2b's `--database-map`;
+230...    - keep one → `--keep <INPUT_PATH>` per object (the copy's `inputs[].path`, relative to the input
+231...      root; `source/<path>` for a copy already in the project). Use `--dedup keep-first` only when
+232...      the user explicitly chooses "keep the first file of every object".
+233... 4. Report each file in `result.duplicatesSkipped` (`path`, `inputPaths`, `keptPath`,
+234...    `keptInputPath`, `policy`) as left out, and `result.decisionRecord`, where the choice is kept.
+235... 
+236... `ADD0030` means a `--keep` named no copy, two different copies, or would drop a copy the project
+237... already registered: show the reason and ask again. A `--keep not applied` entry in `error.details`
+238... names a `--keep` that matched no copy while other objects stayed undecided. `ADD0019` / `ADD0021` with `--dedup keep-first`
+239... mean no copy can be chosen from the input: tell the user which files to remove.
+240... 
+241... **When nobody can answer** (an autonomous or headless run, a walker or Hail Mary agent, or no
+242... `ask_user_question`): apply only S1 database assignments whose evidence is unambiguous (every
+243... folder or prefix matches a database the references or the source name) and S3 identical-copy
+244... handling. Never pass `--keep` or `--dedup keep-first`, and never treat an automated reply as the
+245... user's choice of a copy. Stop and report the groups still blocked, with their evidence.
+246... 
+247... ### Step 4: Import ETL
+248... 
+249... **Skip this entire step for a dbt project.** If Step 1 found `dbt_project.yml`, do **not** ask the
+250... ETL question — a dbt workload has no SSIS or Informatica packages, and asking it is a defect. Go
+251... straight to Step 5 without calling `ask_user_question`.
+252... 
+253... ETL belongs in the project from register onward. Read `has_etl_code` from `configure()` (set by
+254... `chooseMigrationExtras` or by the parent register skill's extras card). Never ask a standalone ETL
+255... yes/no — that question lives only on the extras multi-select.
+256... 
+257... - If `has_etl_code` is **`false`** (explicitly): the user already said no ETL — proceed to Step 5 without asking.
+258... - If `has_etl_code` is **not set**: return to the parent register skill and collect the extras card there, then re-read `has_etl_code`. Do not invent a yes/no.
+259... - If `has_etl_code` is **`true`** (explicitly): open [etl.md](etl.md) and follow it. That file holds the ETL import
+260...   steps: which directory each platform uses, and how each unit is registered as `kind: etl`. Come
+261...   back here at Step 5 when it finishes. Do not register ETL as `customKind`.
+262... 
+263... ### Step 5: Import Power BI templates
+264... 
+265... Power BI template (`.pbit`) files are inventory only: `code add` copies them to
+266... `source/BI/PowerBI/` and `artifacts/BI/PowerBI/` and never sends them to the conversion engine.
+267... Read `has_power_bi` from `configure()`:
+268... 
+269... - If `has_power_bi` is **`false`**, proceed to Step 6 without asking.
+270... - If `has_power_bi` is not set, return to the parent register skill and collect
+271...   the extras card, then re-read it.
+272... - If `has_power_bi` is **`true`**, first check whether Step 3 already imported
+273...   `.pbit` files. If it did, proceed to Step 6. Otherwise ask only for the folder
+274...   path and compare it to `<INPUT_PATH>`:
+275...   - If it is **the same as, or inside, `<INPUT_PATH>`**, Step 3 already imported it — `code add` claims `.pbit` files anywhere under the input path. Proceed to Step 6 without running a second `code add`.
+276...   - Otherwise (a genuinely separate folder) run:
+277... 
+278... ```bash
+279... scai code add -i <POWER_BI_PATH> --json
+280... ```
+281... 
+282... Do **not** pass `--overwrite` here — existing SQL/ETL in `source/` would be wiped. If it
+283... times out, runs in the background or fails, handle it as
+284... [Step 3](#if-the-import-times-out-or-runs-in-the-background) says.
+285... 
+286... Confirm files landed in both `source/BI/PowerBI/` and `artifacts/BI/PowerBI/` before continuing.
+287... 
+288... ### Step 6: Verify Files Were Added
+289... 
+290... Check that `source/` contains the expected `.sql` files and report a count. Use whichever portable form fits the host:
+291... 
+292... ```bash
+293... # macOS / Linux
+294... find source/ -name "*.sql" | head -20
+295... find source/ -name "*.sql" | wc -l
+296... ```
+297... 
+298... ```powershell
+299... # Windows PowerShell
+300... Get-ChildItem -Recurse -Filter *.sql source/ | Select-Object -First 20
+301... (Get-ChildItem -Recurse -Filter *.sql source/).Count
+302... ```
+303... 
+304... ## Output Structure
+305... 
+306... ```
+307... artifacts/source_raw/    Original files copied from input path
+308... artifacts/source_split/  sc-tag annotated copies (only created when some file needed tags)
+309... source/                  Arranged source files ready for conversion
+310... source/_etl/             ETL packages (when present)
+311... source/BI/PowerBI/       Power BI `.pbit` templates (inventory only, not converted)
+312... artifacts/BI/PowerBI/    Same relative layout as `source/BI/PowerBI/`
+313... ```
+314... 
+315... ## Troubleshooting
+316... 
+317... | Issue | Solution |
+318... |-------|----------|
+319... | "conflicting files" error | Use `--overwrite` flag to replace existing files |
+320... | `ADD0029` database unknown | The copies collide in `defaultdb`: give the files their databases (Step 2b), see [Duplicated objects](#duplicated-objects) |
+321... | `ADD0026` database map rule matches no file | Fix the rule's pattern (relative to the input root) |
+322... | `ADD0033` database map rule is shadowed | An earlier rule takes all its files: put the narrower rule first |
+323... | `ADD0010: Source files must contain SC tags` | The arrange engine found no `/* <sc-...> */` boundary tags. For a **dbt project**, re-run with `--code-already-split` (required on every dbt add). For a non-dbt source, run Step 2 (`split_code`) first and pass the returned `artifacts/source_split/` path. |
+324... | No `.sql` files found after add | Verify input path contains valid SQL files |
+325... | Unexpected file arrangement | Check `artifacts/source_raw/` for the original copies |
+326... | `split_code` reports verification errors | Manually inspect flagged files; the tool lists each with its boundary and tag counts |
+327... 
+328... ## CHECKPOINT
+329... 
+330... Check these yourself against the `--json` envelope. Do **not** turn them into a
+331... question — the envelope already says what was imported, and the user cannot
+332... verify a count you just computed for them:
+333... 
+334... - [ ] Every `scai code add` finished with exit code 0 and an envelope with `"success": true`
+335...       — a timeout or a background launch is neither; wait for the job as Step 3 says
+336... - [ ] `filesCopied` matches the SQL files in the input path
+337... - [ ] `.sql` files are present under `source/`
+338... - [ ] SQL Server: every file without its own `USE` got a database (Step 2b), or the user chose to
+339...       leave the input in one unnamed database
+340... - [ ] If Power BI was imported: files exist in both `source/BI/PowerBI/` and `artifacts/BI/PowerBI/`
+341... 
+342... Stop and ask only when a check fails: say which one, and what you propose to do
+343... about it.
+344... 
+345... ## On Completion
+346... 
+347... ### Break down `Other` from the registry
+348... 
+349... `byType` counts units by `objectType`. `Other` is the registry's catch-all, not a type: every
+350... type it knows (`trigger`, `index`, `joinIndex`, …) has its own row, so never say a type you
+351... expected "lands in" `Other`. Most of its units are missing references — objects the imported
+352... code uses but no imported file defines, registered with `isMissing = true`. They count in
+353... `codeUnitsAdded`, which is why the total can exceed the objects in the source files.
+354... 
+355... When `byType` has an `Other` row, look up what is in it before you report, never guess:
+356... 
+357... ```
+358... query_registry(where="source.objectType = 'other' AND isMissing = true", fields="id,source.name,source.schema", limit=5)
+359... query_registry(where="source.objectType = 'other' AND NOT isMissing = true", fields="id,source.name,files.source.path", limit=5)
+360... ```
+361... 
+362... Each response's `total` is that group's count; its `results` give a few names to quote. If the
+363... two totals do not add up to the `Other` count, give the counts you have and say the rest are
+364... unexplained.
+365... 
+366... ### Report
+367... 
+368... After the CHECKPOINT passes, tell the user — a statement, not a question. Fill placeholders from the JSON envelope returned by `scai code add --json`.
+369... Never report the import as complete, or as fine, without that envelope in hand: on a failure,
+370... report it as Step 3 says instead.
+371... 
+372... > **Import complete.** `<filesCopied>` files imported as `<codeUnitsAdded>` code units, broken down by type (filled from `byType`). Files in `source/`.
+373... > *If `byType` has `Other`:* `<missing total>` are missing references: objects your code uses that the imported files do not define (e.g. `<names>`); add their DDL if they belong in the migration. *If the second total is not 0:* `<other total>` more are defined in your files with no type the registry knows (e.g. `<names>`).
+374... > *If `etlFilesAdded > 0`:* ETL: `<etlFilesAdded>` files added.
+375... > *If `etlFilesSkippedInvalidSchema > 0`:* `<etlFilesSkippedInvalidSchema>` ETL files skipped due to invalid schema.
+376... > *If Power BI files were added:* Power BI templates copied to `source/BI/PowerBI/` and `artifacts/BI/PowerBI/` (not converted).
+377... > Next, we'll convert these to Snowflake SQL.
+378... 
+379... Then return to the calling skill **in this same turn**. That last line announces
+380... the next step; it is not a stopping point. Under setup, call `progress_setup()`
+381... now and start the step it names. Ending the turn on it leaves the user watching
+382... an idle screen with nothing to click until they type "continue".
+383... 

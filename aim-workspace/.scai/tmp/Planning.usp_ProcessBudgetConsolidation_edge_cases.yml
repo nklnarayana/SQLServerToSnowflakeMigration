@@ -1,0 +1,13 @@
+test_cases:
+  - [null, null, null, null, null, null, null, null, null, null]                                          # expects empty: all-null; NULL source id fails the BudgetHeader EXISTS check and raises
+  - [10001, null, "FULL", 1, 1, null, 1, 0, null, null]                                                   # expects rows: BudgetHeaderID 10001 is APPROVED with 26 BudgetLineItem rows; full happy path, creates target header
+  - [10001, null, "INCREMENTAL", 0, 1, null, 1, 0, null, null]                                            # expects rows: same key, @IncludeEliminations=0 skips the elimination cursor branch
+  - [10001, null, "DELTA", 1, 0, null, 1, 0, null, null]                                                  # expects rows: @RecalculateAllocations=0 takes the ELSE 'Initialize Final Amounts' branch instead of sp_executesql
+  - [10001, null, "INCREMENTAL_DELTA_20", 1, 1, null, 1, 0, null, null]                                   # expects rows: @ConsolidationType at exactly its declared VARCHAR(20) width
+  - [10001, null, "", 1, 1, null, 0, 0, null, null]                                                       # expects rows: empty @ConsolidationType (never used as an identifier) and @UserID = 0
+  - [10001, null, "FULL", 1, 1, "<Options><RoundingPrecision>0</RoundingPrecision></Options>", 1, 0, null, null]  # expects rows: XML options with RoundingPrecision at its lower boundary 0, rewriting the dynamic SQL to ROUND(...,0)
+  - [10001, null, "FULL", 1, 1, "<Options><IncludeZeroBalances>0</IncludeZeroBalances><RoundingPrecision>4</RoundingPrecision></Options>", 1, 1, null, null]  # expects rows: both XML options set (zero balances excluded, rounding to the DECIMAL(19,4) scale) with @DebugMode=1 returning the log result sets
+  - [10001, 10002, "FULL", 1, 1, null, 1, 0, null, null]                                                  # expects rows: @TargetBudgetHeaderID 10002 already exists, so header creation and the OUTPUT-clause insert are skipped
+  - [10003, null, "FULL", 1, 1, null, null, 0, null, null]                                                # expects rows: 10003 is APPROVED but has no BudgetLineItem rows; consolidation runs and returns @RowsProcessed with @UserID null
+  - [10004, null, "FULL", 0, 0, null, 1, 0, null, null]                                                   # expects rows: largest existing BudgetHeaderID that passes the APPROVED/LOCKED predicate, both BIT flags off
+  - [10002, null, "FULL", 1, 1, null, 1, 0, null, null]                                                   # expects empty: 10002 exists but is not APPROVED or LOCKED, so THROW 50001 fires before any DML
