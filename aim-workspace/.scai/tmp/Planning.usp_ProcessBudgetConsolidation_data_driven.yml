@@ -1,0 +1,9 @@
+test_cases:
+  - [1, null, "FULL", 1, 1, null, 1, 0, null, null]            # expects rows: lowest BudgetHeaderID, full consolidation with eliminations and allocations, new target created
+  - [1, null, "INCREMENTAL", 0, 0, null, 1, 0, null, null]      # expects rows: same source, incremental path with eliminations and allocation recalc off
+  - [2, null, "DELTA", 1, 0, null, 2, 0, null, null]            # expects rows: second header, delta consolidation, eliminations on
+  - [2, null, "FULL", 0, 1, null, null, 0, null, null]          # expects rows: NULL UserID is the parameter default, allocations recalculated
+  - [3, null, "FULL", 1, 1, null, 3, 1, null, null]             # expects rows: debug mode on emits the processing log rows
+  - [4, null, "INCREMENTAL", 1, 1, null, 4, 0, null, null]      # expects rows: another approved/locked header through the incremental branch
+  - [5, null, "FULL", 0, 0, null, 5, 0, null, null]             # expects rows: both optional phases skipped, consolidation only
+  - [6, null, "DELTA", 0, 1, null, 6, 1, null, null]            # expects rows: highest seeded header, delta with allocations and debug output

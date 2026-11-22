@@ -1,0 +1,10 @@
+schema_version: 1.0
+project_id: MIGRATION_PROJECT_d9017fa6_47c5_4f63_a59e_ee868f217a5e
+project_name: aim-workspace
+source_language: SqlServer
+created_by: lakshmi
+created_at: 2026-11-22T00:29:07.9887060Z
+cloud_project_id: MIGRATION_PROJECT_d9017fa6_47c5_4f63_a59e_ee868f217a5e
+default_affinity: aim-workspace-d9017fa6
+project_type: full_migration
+enable_cloud_status: true

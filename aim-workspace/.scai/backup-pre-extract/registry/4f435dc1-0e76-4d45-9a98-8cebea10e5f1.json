@@ -1,0 +1,352 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "4f435dc1-0e76-4d45-9a98-8cebea10e5f1",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "04e8f1ca-14ee-4f42-b004-2254463f671b",
+      "6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e",
+      "f6ea4fac-78c8-4014-8da2-1c3cb9931501"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/consolidationjournal"
+    },
+    "converted": {
+      "checksum": "ef1fc1cbd1d9f3bc8302310783fa7f01",
+      "path": "snowflake/financial_planning/planning/table/consolidationjournal.sql"
+    },
+    "source": {
+      "checksum": "f8a68506688f0219b61e761b7d398705",
+      "path": "source/financial_planning/planning/table/consolidationjournal.sql"
+    }
+  },
+  "id": "4f435dc1-0e76-4d45-9a98-8cebea10e5f1",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-0073",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-FDM-TS0087",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 2,
+    "wave": 1,
+    "waveRank": 3
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "JournalID",
+        "nullable": false,
+        "targetName": "JournalID",
+        "targetType": "BIGINT",
+        "type": "BIGINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "JournalNumber",
+        "nullable": false,
+        "targetName": "JournalNumber",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "JournalType",
+        "nullable": false,
+        "targetName": "JournalType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetHeaderID",
+        "nullable": false,
+        "targetName": "BudgetHeaderID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalPeriodID",
+        "nullable": false,
+        "targetName": "FiscalPeriodID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PostingDate",
+        "nullable": false,
+        "targetName": "PostingDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "Description",
+        "nullable": true,
+        "targetName": "Description",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "StatusCode",
+        "nullable": false,
+        "targetName": "StatusCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "SourceEntityCode",
+        "nullable": true,
+        "targetName": "SourceEntityCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TargetEntityCode",
+        "nullable": true,
+        "targetName": "TargetEntityCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsAutoReverse",
+        "nullable": false,
+        "targetName": "IsAutoReverse",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ReversalPeriodID",
+        "nullable": true,
+        "targetName": "ReversalPeriodID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ReversedFromJournalID",
+        "nullable": true,
+        "targetName": "ReversedFromJournalID",
+        "targetType": "BIGINT",
+        "type": "BIGINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsReversed",
+        "nullable": false,
+        "targetName": "IsReversed",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalDebits",
+        "nullable": false,
+        "targetName": "TotalDebits",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TotalCredits",
+        "nullable": false,
+        "targetName": "TotalCredits",
+        "targetType": "DECIMAL",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsBalanced",
+        "nullable": true,
+        "targetName": "PreparedByUserID",
+        "targetType": "INT",
+        "type": "EXACTNUMERIC"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PreparedByUserID",
+        "nullable": true,
+        "targetName": "PreparedDateTime",
+        "targetType": "",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PreparedDateTime",
+        "nullable": true,
+        "targetName": "ReviewedByUserID",
+        "targetType": "INT",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ReviewedByUserID",
+        "nullable": true,
+        "targetName": "ReviewedDateTime",
+        "targetType": "",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ReviewedDateTime",
+        "nullable": true,
+        "targetName": "ApprovedByUserID",
+        "targetType": "INT",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ApprovedByUserID",
+        "nullable": true,
+        "targetName": "ApprovedDateTime",
+        "targetType": "",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ApprovedDateTime",
+        "nullable": true,
+        "targetName": "PostedByUserID",
+        "targetType": "INT",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PostedByUserID",
+        "nullable": true,
+        "targetName": "PostedDateTime",
+        "targetType": "",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "PostedDateTime",
+        "nullable": true,
+        "targetName": "AttachmentData",
+        "targetType": "VARBINARY",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AttachmentData",
+        "nullable": true,
+        "targetName": "AttachmentRowGuid",
+        "targetType": "VARCHAR",
+        "type": "VARBINARY"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AttachmentRowGuid",
+        "nullable": false,
+        "type": "UNIQUEIDENTIFIER"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.ConsolidationJournal",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "ConsolidationJournal",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.ConsolidationJournal",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "ConsolidationJournal",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

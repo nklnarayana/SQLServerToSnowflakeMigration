@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated"
+    },
+    "converted": {
+      "checksum": "08876b64b0a0fd62ee0005e306a85b62",
+      "path": "snowflake/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql"
+    },
+    "source": {
+      "checksum": "de98b5a3094f0805abec89b37ed98c52",
+      "path": "source/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql"
+    }
+  },
+  "id": "e04b783e-f5b0-4c8d-a287-47ce905af2ed",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.IX_BudgetLineItem_Allocated",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "IX_BudgetLineItem_Allocated",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.IX_BudgetLineItem_Allocated",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "IX_BudgetLineItem_Allocated",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

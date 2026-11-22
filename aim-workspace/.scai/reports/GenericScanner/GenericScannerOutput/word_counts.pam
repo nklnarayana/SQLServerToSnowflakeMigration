@@ -1,0 +1,1127 @@
+FileId,Keyword,Count
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,create,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,for,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,go,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,index,2
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,on,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,path,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,use,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,using,1
+/financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,xml,2
+/financial_planning/dbo/unknown_type/allocationrule.sql,create,1
+/financial_planning/dbo/unknown_type/allocationrule.sql,go,1
+/financial_planning/dbo/unknown_type/allocationrule.sql,index,1
+/financial_planning/dbo/unknown_type/allocationrule.sql,on,1
+/financial_planning/dbo/unknown_type/allocationrule.sql,primary,1
+/financial_planning/dbo/unknown_type/allocationrule.sql,use,1
+/financial_planning/dbo/unknown_type/allocationrule.sql,xml,1
+/financial_planning/dbo/unknown_type/planning.sql,=,1
+/financial_planning/dbo/unknown_type/planning.sql,begin,1
+/financial_planning/dbo/unknown_type/planning.sql,end,1
+/financial_planning/dbo/unknown_type/planning.sql,exec,1
+/financial_planning/dbo/unknown_type/planning.sql,exists,1
+/financial_planning/dbo/unknown_type/planning.sql,from,1
+/financial_planning/dbo/unknown_type/planning.sql,go,1
+/financial_planning/dbo/unknown_type/planning.sql,if,1
+/financial_planning/dbo/unknown_type/planning.sql,name,1
+/financial_planning/dbo/unknown_type/planning.sql,not,1
+/financial_planning/dbo/unknown_type/planning.sql,select,1
+/financial_planning/dbo/unknown_type/planning.sql,use,1
+/financial_planning/dbo/unknown_type/planning.sql,where,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,create,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,go,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,index,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,on,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,primary,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,use,1
+/financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,xml,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,=,45
+/financial_planning/planning/function/fn_getallocationfactor.sql,and,17
+/financial_planning/planning/function/fn_getallocationfactor.sql,as,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,begin,5
+/financial_planning/planning/function/fn_getallocationfactor.sql,count,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,create function,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,decimal,4
+/financial_planning/planning/function/fn_getallocationfactor.sql,declare,4
+/financial_planning/planning/function/fn_getallocationfactor.sql,else,3
+/financial_planning/planning/function/fn_getallocationfactor.sql,end,5
+/financial_planning/planning/function/fn_getallocationfactor.sql,from,7
+/financial_planning/planning/function/fn_getallocationfactor.sql,go,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,if,6
+/financial_planning/planning/function/fn_getallocationfactor.sql,inner join,6
+/financial_planning/planning/function/fn_getallocationfactor.sql,int,5
+/financial_planning/planning/function/fn_getallocationfactor.sql,is not null,2
+/financial_planning/planning/function/fn_getallocationfactor.sql,is null,4
+/financial_planning/planning/function/fn_getallocationfactor.sql,null,3
+/financial_planning/planning/function/fn_getallocationfactor.sql,on,7
+/financial_planning/planning/function/fn_getallocationfactor.sql,or,6
+/financial_planning/planning/function/fn_getallocationfactor.sql,return,2
+/financial_planning/planning/function/fn_getallocationfactor.sql,returns,2
+/financial_planning/planning/function/fn_getallocationfactor.sql,select,7
+/financial_planning/planning/function/fn_getallocationfactor.sql,set,2
+/financial_planning/planning/function/fn_getallocationfactor.sql,sum,5
+/financial_planning/planning/function/fn_getallocationfactor.sql,use,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,varchar,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,where,7
+/financial_planning/planning/function/fn_getallocationfactor.sql,with,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,*,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,/,2
+/financial_planning/planning/function/fn_getallocationfactor.sql,<>,1
+/financial_planning/planning/function/fn_getallocationfactor.sql,>,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,=,13
+/financial_planning/planning/function/fn_gethierarchypath.sql,and,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,as,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,begin,2
+/financial_planning/planning/function/fn_gethierarchypath.sql,create function,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,declare,6
+/financial_planning/planning/function/fn_gethierarchypath.sql,else,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,end,2
+/financial_planning/planning/function/fn_gethierarchypath.sql,from,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,go,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,if,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,int,5
+/financial_planning/planning/function/fn_gethierarchypath.sql,is not null,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,nvarchar,4
+/financial_planning/planning/function/fn_gethierarchypath.sql,return,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,returns,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,select,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,set,4
+/financial_planning/planning/function/fn_gethierarchypath.sql,use,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,where,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,while,1
+/financial_planning/planning/function/fn_gethierarchypath.sql,+,3
+/financial_planning/planning/function/fn_gethierarchypath.sql,<,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,=,16
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,abs,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,and,4
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,as,15
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,case,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,char,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,coalesce,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,create function,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,decimal,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,else,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,end,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,from,4
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,full outer join,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,go,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,group by,2
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,inner join,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,int,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,is null,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,isnull,8
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,null,5
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,on,4
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,or,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,return,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,returns,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,select,4
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,smallint,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,sum,2
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,table,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,then,4
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,use,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,when,4
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,where,3
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,with,2
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,*,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,-,2
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,/,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,<,1
+/financial_planning/planning/function/tvf_getbudgetvariance.sql,>,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,=,23
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,@@rowcount,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,and,10
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,as,12
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,begin,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,bit,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,case,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,cast,4
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,count,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,create function,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,date,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,decimal,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,declare,3
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,else,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,end,3
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,exists,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,from,6
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,getdate,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,go,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,inner join,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,insert,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,int,8
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,into,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,is null,4
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,isnull,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,not null,9
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,not,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,null,3
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,nvarchar,3
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,on,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,or,6
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,primary key,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,return,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,returns,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,right,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,select,5
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,set,3
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,table,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,then,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,update,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,use,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,varchar,5
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,when,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,where,5
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,while,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,with,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,*,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,+,7
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,-,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,<=,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,<,1
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,>=,2
+/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,>,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,=,121
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,@@rowcount,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,@@trancount,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,and,12
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,as,33
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,begin try,6
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,begin transaction,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,begin catch,6
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,begin,14
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,between,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,bit,8
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,case,10
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,cast,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,commit,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,concat,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,count,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,create procedure,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,datediff,14
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,datetime2,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,decimal,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,declare,29
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,desc,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,drop table if exists,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,else,11
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,end try,6
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,end catch,6
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,end,24
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,error_message,6
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,exec,6
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,exists,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,for,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,format,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,from,16
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,go,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,goto,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,identity,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,if,16
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,in,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,inner join,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,insert,18
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,int,14
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,into,19
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,is not null,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,is null,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,isnull,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,max,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,newid,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,null,7
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,nvarchar,11
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,of,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,off,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,on,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,order by,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,path,4
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,primary key,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,return,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,rollback,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,select,18
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,set,31
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,smallint,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,sum,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,summary,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,system_time,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,sysutcdatetime,43
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,table,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,then,13
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,throw,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,tinyint,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,top,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,transaction,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,type,3
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,uniqueidentifier,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,update,2
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,use,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,values,18
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,varchar,7
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,when,13
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,where,12
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,xml,7
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,*,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,+,5
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,-,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,<,1
+/financial_planning/planning/procedure/usp_performfinancialclose.sql,>,5
+/financial_planning/planning/procedure/usp_executecostallocation.sql,=,39
+/financial_planning/planning/procedure/usp_executecostallocation.sql,and,9
+/financial_planning/planning/procedure/usp_executecostallocation.sql,apply,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,as,9
+/financial_planning/planning/procedure/usp_executecostallocation.sql,begin try,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,begin transaction,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,begin,6
+/financial_planning/planning/procedure/usp_executecostallocation.sql,between,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,bigint,2
+/financial_planning/planning/procedure/usp_executecostallocation.sql,bit,2
+/financial_planning/planning/procedure/usp_executecostallocation.sql,cast,5
+/financial_planning/planning/procedure/usp_executecostallocation.sql,charindex,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,create table,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,create procedure,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,cross,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,datetime2,2
+/financial_planning/planning/procedure/usp_executecostallocation.sql,decimal,7
+/financial_planning/planning/procedure/usp_executecostallocation.sql,declare,7
+/financial_planning/planning/procedure/usp_executecostallocation.sql,default,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,distinct,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,else,2
+/financial_planning/planning/procedure/usp_executecostallocation.sql,end,5
+/financial_planning/planning/procedure/usp_executecostallocation.sql,escape,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,exclusive,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,exec,2
+/financial_planning/planning/procedure/usp_executecostallocation.sql,exists,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,from,8
+/financial_planning/planning/procedure/usp_executecostallocation.sql,getdate,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,go,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,goto,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,group by,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,identity,2
+/financial_planning/planning/procedure/usp_executecostallocation.sql,if,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,index,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,inner join,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,insert,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,int,24
+/financial_planning/planning/procedure/usp_executecostallocation.sql,into,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,is not null,3
+/financial_planning/planning/procedure/usp_executecostallocation.sql,is null,3
+/financial_planning/planning/procedure/usp_executecostallocation.sql,isnull,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,level,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,like,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,ltrim,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,max,6
+/financial_planning/planning/procedure/usp_executecostallocation.sql,not null,15
+/financial_planning/planning/procedure/usp_executecostallocation.sql,not,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,null,7
+/financial_planning/planning/procedure/usp_executecostallocation.sql,nvarchar,3
+/financial_planning/planning/procedure/usp_executecostallocation.sql,on,6
+/financial_planning/planning/procedure/usp_executecostallocation.sql,option,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,or,3
+/financial_planning/planning/procedure/usp_executecostallocation.sql,path,3
+/financial_planning/planning/procedure/usp_executecostallocation.sql,primary key,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,r,7
+/financial_planning/planning/procedure/usp_executecostallocation.sql,rtrim,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,rule,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,select,8
+/financial_planning/planning/procedure/usp_executecostallocation.sql,session,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,set,4
+/financial_planning/planning/procedure/usp_executecostallocation.sql,shared,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,some,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,string_split,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,try_convert,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,union all,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,use,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,value,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,varchar,7
+/financial_planning/planning/procedure/usp_executecostallocation.sql,where,6
+/financial_planning/planning/procedure/usp_executecostallocation.sql,with,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,*,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,+,5
+/financial_planning/planning/procedure/usp_executecostallocation.sql,-,1
+/financial_planning/planning/procedure/usp_executecostallocation.sql,<,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,=,54
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,abs,16
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,account,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,and,11
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,apply,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,as,42
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,begin try,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,begin catch,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,begin,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,between,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,bigint,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,bit,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,case,8
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,cast,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,charindex,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,concat,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,count,5
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,create table,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,create procedure,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,cross,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,date,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,decimal,8
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,declare,7
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,default,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,desc,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,description,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,distinct,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,drop table if exists,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,else,9
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,end try,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,end catch,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,end,12
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,error_line,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,error_message,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,error_number,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,error_procedure,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,exec,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,exists,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,for,6
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,format,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,from,21
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,getdate,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,go,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,group by,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,hashbytes,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,having,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,identity,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,if,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,include,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,index,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,inner join,6
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,insert,6
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,int,9
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,into,6
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,is not null,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,is null,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,isnull,13
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,join,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,left,8
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,like,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,matches,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,newid,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,not null,8
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,null,7
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,nvarchar,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,on,11
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,openxml,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,or,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,order by,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,over,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,path,6
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,primary key,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,root,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,round,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,row_number,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,select,26
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,set,6
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,sum,21
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,table,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,then,15
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,throw,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,top,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,type,4
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,uniqueidentifier,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,update,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,use,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,varbinary,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,varchar,9
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,variance,14
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,when,15
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,where,15
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,with,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,xml,8
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,*,5
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,+,14
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,-,7
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,/,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,<>,2
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,<=,3
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,<,1
+/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,>,5
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,=,49
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,@@spid,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,abs,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,and,9
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,as,44
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,avg,7
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,begin try,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,begin catch,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,begin,6
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,between,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,bit,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,case,5
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,cast,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,concat,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,count,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,create table,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,create procedure,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,cross join,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,current,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,datediff,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,datetime2,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,decimal,13
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,declare,8
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,default,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,distinct,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,drop table if exists,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,drop table,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,else,7
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,end try,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,end catch,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,end,11
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,error_line,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,error_message,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,error_number,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,exec,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,for,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,format,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,from,20
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,getdate,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,go,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,group by,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,identity,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,if,5
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,inner join,5
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,insert,6
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,int,15
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,into,6
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,is not null,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,is null,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,isnull,6
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,join,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,json,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,key,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,lag,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,left,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,max,7
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,null,5
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,nullif,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,nvarchar,5
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,object_id,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,on,8
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,openjson,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,order by,14
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,over,16
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,partition by,15
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,path,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,percentile_cont,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,power,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,preceding,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,primary key,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,quotename,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,row,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,rows,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,row_number,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,select,22
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,sessionid,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,set,7
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,smallint,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,sqrt,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,stddev,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,stdev,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,stuff,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,sum,7
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,sysutcdatetime,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,table,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,then,8
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,throw,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,type,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,unbounded,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,update,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,use,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,value,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,values,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,varchar,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,when,8
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,where,17
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,with,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,within group,3
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,xml,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,*,25
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,+,17
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,-,9
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,/,4
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,<>,2
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,<=,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,>=,1
+/financial_planning/planning/procedure/usp_generaterollingforecast.sql,>,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,=,97
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,@@rowcount,6
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,account,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,action,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,and,22
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,as,34
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,batchsize,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,begin try,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,begin catch,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,begin,14
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,bigint,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,bit,3
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,case,11
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,cast,3
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,concat,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,count,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,create table,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,create procedure,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,datediff,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,datetime2,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,decimal,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,declare,11
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,default,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,drop table if exists,3
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,else,16
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,end try,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,end catch,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,end,25
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,errors,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,error_message,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,exec,3
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,exists,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,for,4
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,from,27
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,go,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,group by,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,identity,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,if,10
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,index,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,inner join,7
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,insert,12
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,int,18
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,into,14
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,is not null,8
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,is null,12
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,isnull,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,max,5
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,merge,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,month,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,newid,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,not,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,null,23
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,nvarchar,13
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,on,10
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,or,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,order by,5
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,over,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,partition by,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,path,4
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,primary key,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,quotename,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,replace,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,return,4
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,root,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,rowid,36
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,rownum,2
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,row_number,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,select,24
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,set,24
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,smallint,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,source,19
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,string_agg,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,sum,4
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,sysutcdatetime,6
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,table,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,target,10
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,then,13
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,tinyint,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,top,4
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,type,3
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,uniqueidentifier,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,update,6
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,use,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,using,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,values,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,varchar,10
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,when not matched,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,when matched,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,when,11
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,where,21
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,while,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,with,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,xml,5
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,year,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,*,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,+,18
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,-,4
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,<>,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,<=,1
+/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,>,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,=,99
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,@@fetch_status,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,@@rowcount,5
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,@@trancount,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,and,11
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,as,13
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,begin try,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,begin transaction,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,begin catch,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,begin,22
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,bigint,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,bit,8
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,cast,7
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,close,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,commit,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,constraint,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,convert,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,count,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,create table,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,create procedure,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,cursor,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,cursor_status,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,datetime2,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,deallocate,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,decimal,8
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,declare,35
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,default,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,desc,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,drop table,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,else,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,end try,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,end catch,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,end,22
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,error_message,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,error_number,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,exec,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,exists,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,fetch,6
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,for,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,format,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,from,20
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,getdate,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,go,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,group by,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,identity,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,if,24
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,index,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,inner join,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,insert,13
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,int,32
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,into,21
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,is not null,6
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,is null,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,isnull,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,local,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,max,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,merge,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,newid,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,next,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,not null,5
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,not in,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,not,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,null,8
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,nvarchar,7
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,object_id,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,of,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,off,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,on,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,open,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,or,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,order by,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,over,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,primary key,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,prior,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,replace,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,return,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,rollback,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,row_number,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,save,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,scroll,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,select,14
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,set,40
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,source,11
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,sum,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,sysutcdatetime,19
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,table,4
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,target,6
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,then,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,throw,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,transaction,7
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,uniqueidentifier,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,update,5
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,use,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,using,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,value,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,values,10
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,varchar,10
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,when not matched,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,when matched,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,where,11
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,while,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,xact_state,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,xml,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,*,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,+,25
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,-,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,<>,3
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,<,1
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,>=,2
+/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,>,2
+/financial_planning/planning/type/hierarchynodetabletype.sql,as,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,bit,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,create type,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,decimal,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,default,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,go,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,int,4
+/financial_planning/planning/type/hierarchynodetabletype.sql,not null,6
+/financial_planning/planning/type/hierarchynodetabletype.sql,null,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,primary key,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,table,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,use,1
+/financial_planning/planning/type/hierarchynodetabletype.sql,varchar,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,as,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,create type,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,decimal,2
+/financial_planning/planning/type/budgetlineitemtabletype.sql,go,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,index,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,int,3
+/financial_planning/planning/type/budgetlineitemtabletype.sql,not null,4
+/financial_planning/planning/type/budgetlineitemtabletype.sql,null,3
+/financial_planning/planning/type/budgetlineitemtabletype.sql,nvarchar,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,primary key,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,table,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,use,1
+/financial_planning/planning/type/budgetlineitemtabletype.sql,varchar,1
+/financial_planning/planning/type/allocationresulttabletype.sql,as,1
+/financial_planning/planning/type/allocationresulttabletype.sql,bigint,1
+/financial_planning/planning/type/allocationresulttabletype.sql,create type,1
+/financial_planning/planning/type/allocationresulttabletype.sql,decimal,2
+/financial_planning/planning/type/allocationresulttabletype.sql,go,1
+/financial_planning/planning/type/allocationresulttabletype.sql,index,2
+/financial_planning/planning/type/allocationresulttabletype.sql,int,4
+/financial_planning/planning/type/allocationresulttabletype.sql,not null,7
+/financial_planning/planning/type/allocationresulttabletype.sql,table,1
+/financial_planning/planning/type/allocationresulttabletype.sql,use,1
+/financial_planning/planning/table/allocationrule.sql,bit,1
+/financial_planning/planning/table/allocationrule.sql,check,2
+/financial_planning/planning/table/allocationrule.sql,constraint,6
+/financial_planning/planning/table/allocationrule.sql,create table,1
+/financial_planning/planning/table/allocationrule.sql,date,2
+/financial_planning/planning/table/allocationrule.sql,datetime2,2
+/financial_planning/planning/table/allocationrule.sql,decimal,2
+/financial_planning/planning/table/allocationrule.sql,default,6
+/financial_planning/planning/table/allocationrule.sql,foreign,2
+/financial_planning/planning/table/allocationrule.sql,go,1
+/financial_planning/planning/table/allocationrule.sql,identity,1
+/financial_planning/planning/table/allocationrule.sql,in,2
+/financial_planning/planning/table/allocationrule.sql,int,6
+/financial_planning/planning/table/allocationrule.sql,key,2
+/financial_planning/planning/table/allocationrule.sql,not null,13
+/financial_planning/planning/table/allocationrule.sql,null,11
+/financial_planning/planning/table/allocationrule.sql,nvarchar,2
+/financial_planning/planning/table/allocationrule.sql,primary key,1
+/financial_planning/planning/table/allocationrule.sql,references,2
+/financial_planning/planning/table/allocationrule.sql,sysutcdatetime,2
+/financial_planning/planning/table/allocationrule.sql,tinyint,1
+/financial_planning/planning/table/allocationrule.sql,unique,1
+/financial_planning/planning/table/allocationrule.sql,use,1
+/financial_planning/planning/table/allocationrule.sql,varchar,7
+/financial_planning/planning/table/allocationrule.sql,xml,1
+/financial_planning/planning/table/fiscalperiod.sql,and,2
+/financial_planning/planning/table/fiscalperiod.sql,between,2
+/financial_planning/planning/table/fiscalperiod.sql,bit,2
+/financial_planning/planning/table/fiscalperiod.sql,check,3
+/financial_planning/planning/table/fiscalperiod.sql,constraint,5
+/financial_planning/planning/table/fiscalperiod.sql,create table,1
+/financial_planning/planning/table/fiscalperiod.sql,date,2
+/financial_planning/planning/table/fiscalperiod.sql,datetime2,3
+/financial_planning/planning/table/fiscalperiod.sql,default,4
+/financial_planning/planning/table/fiscalperiod.sql,go,1
+/financial_planning/planning/table/fiscalperiod.sql,identity,1
+/financial_planning/planning/table/fiscalperiod.sql,int,2
+/financial_planning/planning/table/fiscalperiod.sql,not null,12
+/financial_planning/planning/table/fiscalperiod.sql,null,3
+/financial_planning/planning/table/fiscalperiod.sql,nvarchar,1
+/financial_planning/planning/table/fiscalperiod.sql,primary key,1
+/financial_planning/planning/table/fiscalperiod.sql,rowversion,1
+/financial_planning/planning/table/fiscalperiod.sql,smallint,1
+/financial_planning/planning/table/fiscalperiod.sql,sysutcdatetime,2
+/financial_planning/planning/table/fiscalperiod.sql,tinyint,3
+/financial_planning/planning/table/fiscalperiod.sql,unique,1
+/financial_planning/planning/table/fiscalperiod.sql,use,1
+/financial_planning/planning/table/fiscalperiod.sql,>=,1
+/financial_planning/planning/table/costcenterhistory.sql,bit,1
+/financial_planning/planning/table/costcenterhistory.sql,collate,3
+/financial_planning/planning/table/costcenterhistory.sql,create table,1
+/financial_planning/planning/table/costcenterhistory.sql,date,2
+/financial_planning/planning/table/costcenterhistory.sql,datetime2,2
+/financial_planning/planning/table/costcenterhistory.sql,decimal,1
+/financial_planning/planning/table/costcenterhistory.sql,go,1
+/financial_planning/planning/table/costcenterhistory.sql,int,3
+/financial_planning/planning/table/costcenterhistory.sql,not null,8
+/financial_planning/planning/table/costcenterhistory.sql,null,6
+/financial_planning/planning/table/costcenterhistory.sql,nvarchar,1
+/financial_planning/planning/table/costcenterhistory.sql,smallint,1
+/financial_planning/planning/table/costcenterhistory.sql,use,1
+/financial_planning/planning/table/costcenterhistory.sql,varchar,2
+/financial_planning/planning/table/consolidationjournalline.sql,and,3
+/financial_planning/planning/table/consolidationjournalline.sql,as,1
+/financial_planning/planning/table/consolidationjournalline.sql,bigint,2
+/financial_planning/planning/table/consolidationjournalline.sql,cascade,1
+/financial_planning/planning/table/consolidationjournalline.sql,char,1
+/financial_planning/planning/table/consolidationjournalline.sql,check,1
+/financial_planning/planning/table/consolidationjournalline.sql,constraint,7
+/financial_planning/planning/table/consolidationjournalline.sql,create table,1
+/financial_planning/planning/table/consolidationjournalline.sql,datetime2,1
+/financial_planning/planning/table/consolidationjournalline.sql,decimal,5
+/financial_planning/planning/table/consolidationjournalline.sql,default,4
+/financial_planning/planning/table/consolidationjournalline.sql,delete,1
+/financial_planning/planning/table/consolidationjournalline.sql,description,1
+/financial_planning/planning/table/consolidationjournalline.sql,foreign,4
+/financial_planning/planning/table/consolidationjournalline.sql,go,1
+/financial_planning/planning/table/consolidationjournalline.sql,identity,1
+/financial_planning/planning/table/consolidationjournalline.sql,int,5
+/financial_planning/planning/table/consolidationjournalline.sql,key,4
+/financial_planning/planning/table/consolidationjournalline.sql,not null,9
+/financial_planning/planning/table/consolidationjournalline.sql,not,1
+/financial_planning/planning/table/consolidationjournalline.sql,null,9
+/financial_planning/planning/table/consolidationjournalline.sql,nvarchar,1
+/financial_planning/planning/table/consolidationjournalline.sql,on,1
+/financial_planning/planning/table/consolidationjournalline.sql,primary key,1
+/financial_planning/planning/table/consolidationjournalline.sql,references,4
+/financial_planning/planning/table/consolidationjournalline.sql,sysutcdatetime,1
+/financial_planning/planning/table/consolidationjournalline.sql,unique,1
+/financial_planning/planning/table/consolidationjournalline.sql,use,1
+/financial_planning/planning/table/consolidationjournalline.sql,varchar,3
+/financial_planning/planning/table/consolidationjournalline.sql,-,1
+/financial_planning/planning/table/consolidationjournalline.sql,>=,2
+/financial_planning/planning/table/consolidationjournalline.sql,>,2
+/financial_planning/planning/table/budgetlineitem.sql,as,6
+/financial_planning/planning/table/budgetlineitem.sql,bigint,2
+/financial_planning/planning/table/budgetlineitem.sql,bit,1
+/financial_planning/planning/table/budgetlineitem.sql,cast,4
+/financial_planning/planning/table/budgetlineitem.sql,concat,1
+/financial_planning/planning/table/budgetlineitem.sql,constraint,6
+/financial_planning/planning/table/budgetlineitem.sql,create table,1
+/financial_planning/planning/table/budgetlineitem.sql,datetime2,1
+/financial_planning/planning/table/budgetlineitem.sql,decimal,7
+/financial_planning/planning/table/budgetlineitem.sql,default,4
+/financial_planning/planning/table/budgetlineitem.sql,foreign,5
+/financial_planning/planning/table/budgetlineitem.sql,go,1
+/financial_planning/planning/table/budgetlineitem.sql,hashbytes,1
+/financial_planning/planning/table/budgetlineitem.sql,identity,1
+/financial_planning/planning/table/budgetlineitem.sql,int,5
+/financial_planning/planning/table/budgetlineitem.sql,key,5
+/financial_planning/planning/table/budgetlineitem.sql,not null,9
+/financial_planning/planning/table/budgetlineitem.sql,null,12
+/financial_planning/planning/table/budgetlineitem.sql,primary key,1
+/financial_planning/planning/table/budgetlineitem.sql,references,5
+/financial_planning/planning/table/budgetlineitem.sql,sysutcdatetime,1
+/financial_planning/planning/table/budgetlineitem.sql,uniqueidentifier,1
+/financial_planning/planning/table/budgetlineitem.sql,use,1
+/financial_planning/planning/table/budgetlineitem.sql,varchar,8
+/financial_planning/planning/table/budgetlineitem.sql,+,2
+/financial_planning/planning/table/glaccount.sql,bit,5
+/financial_planning/planning/table/glaccount.sql,char,3
+/financial_planning/planning/table/glaccount.sql,check,2
+/financial_planning/planning/table/glaccount.sql,constraint,5
+/financial_planning/planning/table/glaccount.sql,create table,1
+/financial_planning/planning/table/glaccount.sql,datetime2,2
+/financial_planning/planning/table/glaccount.sql,default,10
+/financial_planning/planning/table/glaccount.sql,foreign,1
+/financial_planning/planning/table/glaccount.sql,go,1
+/financial_planning/planning/table/glaccount.sql,identity,1
+/financial_planning/planning/table/glaccount.sql,in,2
+/financial_planning/planning/table/glaccount.sql,int,3
+/financial_planning/planning/table/glaccount.sql,key,1
+/financial_planning/planning/table/glaccount.sql,not null,14
+/financial_planning/planning/table/glaccount.sql,null,6
+/financial_planning/planning/table/glaccount.sql,nvarchar,1
+/financial_planning/planning/table/glaccount.sql,primary key,1
+/financial_planning/planning/table/glaccount.sql,references,1
+/financial_planning/planning/table/glaccount.sql,sysutcdatetime,2
+/financial_planning/planning/table/glaccount.sql,tinyint,1
+/financial_planning/planning/table/glaccount.sql,unique,1
+/financial_planning/planning/table/glaccount.sql,use,1
+/financial_planning/planning/table/glaccount.sql,varchar,5
+/financial_planning/planning/table/budgetheader.sql,as,1
+/financial_planning/planning/table/budgetheader.sql,case,1
+/financial_planning/planning/table/budgetheader.sql,check,1
+/financial_planning/planning/table/budgetheader.sql,constraint,6
+/financial_planning/planning/table/budgetheader.sql,create table,1
+/financial_planning/planning/table/budgetheader.sql,datetime2,5
+/financial_planning/planning/table/budgetheader.sql,default,4
+/financial_planning/planning/table/budgetheader.sql,else,1
+/financial_planning/planning/table/budgetheader.sql,end,1
+/financial_planning/planning/table/budgetheader.sql,foreign,3
+/financial_planning/planning/table/budgetheader.sql,go,1
+/financial_planning/planning/table/budgetheader.sql,identity,1
+/financial_planning/planning/table/budgetheader.sql,in,1
+/financial_planning/planning/table/budgetheader.sql,int,7
+/financial_planning/planning/table/budgetheader.sql,is not null,1
+/financial_planning/planning/table/budgetheader.sql,key,3
+/financial_planning/planning/table/budgetheader.sql,max,1
+/financial_planning/planning/table/budgetheader.sql,not null,12
+/financial_planning/planning/table/budgetheader.sql,null,8
+/financial_planning/planning/table/budgetheader.sql,nvarchar,2
+/financial_planning/planning/table/budgetheader.sql,primary key,1
+/financial_planning/planning/table/budgetheader.sql,references,3
+/financial_planning/planning/table/budgetheader.sql,smallint,1
+/financial_planning/planning/table/budgetheader.sql,sysutcdatetime,2
+/financial_planning/planning/table/budgetheader.sql,then,1
+/financial_planning/planning/table/budgetheader.sql,unique,1
+/financial_planning/planning/table/budgetheader.sql,use,1
+/financial_planning/planning/table/budgetheader.sql,varchar,4
+/financial_planning/planning/table/budgetheader.sql,when,1
+/financial_planning/planning/table/budgetheader.sql,xml,1
+/financial_planning/planning/table/costcenter.sql,=,2
+/financial_planning/planning/table/costcenter.sql,always,2
+/financial_planning/planning/table/costcenter.sql,and,1
+/financial_planning/planning/table/costcenter.sql,as,3
+/financial_planning/planning/table/costcenter.sql,between,1
+/financial_planning/planning/table/costcenter.sql,bit,1
+/financial_planning/planning/table/costcenter.sql,check,1
+/financial_planning/planning/table/costcenter.sql,constraint,4
+/financial_planning/planning/table/costcenter.sql,create table,1
+/financial_planning/planning/table/costcenter.sql,date,2
+/financial_planning/planning/table/costcenter.sql,datetime2,2
+/financial_planning/planning/table/costcenter.sql,decimal,1
+/financial_planning/planning/table/costcenter.sql,default,2
+/financial_planning/planning/table/costcenter.sql,end,1
+/financial_planning/planning/table/costcenter.sql,for,1
+/financial_planning/planning/table/costcenter.sql,foreign,1
+/financial_planning/planning/table/costcenter.sql,generated,2
+/financial_planning/planning/table/costcenter.sql,go,1
+/financial_planning/planning/table/costcenter.sql,identity,1
+/financial_planning/planning/table/costcenter.sql,int,3
+/financial_planning/planning/table/costcenter.sql,key,1
+/financial_planning/planning/table/costcenter.sql,not null,8
+/financial_planning/planning/table/costcenter.sql,null,5
+/financial_planning/planning/table/costcenter.sql,nvarchar,1
+/financial_planning/planning/table/costcenter.sql,on,1
+/financial_planning/planning/table/costcenter.sql,period,1
+/financial_planning/planning/table/costcenter.sql,primary key,1
+/financial_planning/planning/table/costcenter.sql,references,1
+/financial_planning/planning/table/costcenter.sql,row,2
+/financial_planning/planning/table/costcenter.sql,start,1
+/financial_planning/planning/table/costcenter.sql,system_time,1
+/financial_planning/planning/table/costcenter.sql,unique,1
+/financial_planning/planning/table/costcenter.sql,use,1
+/financial_planning/planning/table/costcenter.sql,varchar,2
+/financial_planning/planning/table/costcenter.sql,with,1
+/financial_planning/planning/table/consolidationjournal.sql,=,1
+/financial_planning/planning/table/consolidationjournal.sql,as,1
+/financial_planning/planning/table/consolidationjournal.sql,bigint,2
+/financial_planning/planning/table/consolidationjournal.sql,bit,2
+/financial_planning/planning/table/consolidationjournal.sql,case,1
+/financial_planning/planning/table/consolidationjournal.sql,constraint,7
+/financial_planning/planning/table/consolidationjournal.sql,create table,1
+/financial_planning/planning/table/consolidationjournal.sql,date,1
+/financial_planning/planning/table/consolidationjournal.sql,datetime2,4
+/financial_planning/planning/table/consolidationjournal.sql,decimal,2
+/financial_planning/planning/table/consolidationjournal.sql,default,6
+/financial_planning/planning/table/consolidationjournal.sql,description,1
+/financial_planning/planning/table/consolidationjournal.sql,else,1
+/financial_planning/planning/table/consolidationjournal.sql,end,1
+/financial_planning/planning/table/consolidationjournal.sql,foreign,4
+/financial_planning/planning/table/consolidationjournal.sql,go,1
+/financial_planning/planning/table/consolidationjournal.sql,identity,1
+/financial_planning/planning/table/consolidationjournal.sql,int,7
+/financial_planning/planning/table/consolidationjournal.sql,key,4
+/financial_planning/planning/table/consolidationjournal.sql,max,1
+/financial_planning/planning/table/consolidationjournal.sql,newsequentialid,1
+/financial_planning/planning/table/consolidationjournal.sql,not null,12
+/financial_planning/planning/table/consolidationjournal.sql,null,14
+/financial_planning/planning/table/consolidationjournal.sql,nvarchar,1
+/financial_planning/planning/table/consolidationjournal.sql,primary key,1
+/financial_planning/planning/table/consolidationjournal.sql,references,4
+/financial_planning/planning/table/consolidationjournal.sql,rowguidcol,1
+/financial_planning/planning/table/consolidationjournal.sql,then,1
+/financial_planning/planning/table/consolidationjournal.sql,unique,2
+/financial_planning/planning/table/consolidationjournal.sql,uniqueidentifier,1
+/financial_planning/planning/table/consolidationjournal.sql,use,1
+/financial_planning/planning/table/consolidationjournal.sql,varbinary,1
+/financial_planning/planning/table/consolidationjournal.sql,varchar,5
+/financial_planning/planning/table/consolidationjournal.sql,when,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,=,2
+/financial_planning/planning/view/vw_allocationruletargets.sql,apply,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,as,14
+/financial_planning/planning/view/vw_allocationruletargets.sql,create view,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,cross,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,from,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,go,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,join,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,left,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,on,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,or,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,query,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,select,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,use,1
+/financial_planning/planning/view/vw_allocationruletargets.sql,value,8
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,=,4
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,as,7
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,count_big,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,create view,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,from,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,go,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,group by,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,inner join,4
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,isnull,2
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,on,4
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,select,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,sum,5
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,use,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,with,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,*,1
+/financial_planning/planning/view/vw_budgetconsolidationsummary.sql,+,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,create,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,go,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,include,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,index,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,on,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,use,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,=,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,create,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,go,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,index,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,on,2
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,unique,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,use,1
+/financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,with,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,=,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,create,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,go,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,index,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,on,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,use,1
+/financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,where,1
+/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql,create,1
+/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql,go,1
+/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql,index,1
+/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql,on,1
+/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql,use,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,=,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,create,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,go,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,index,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,on,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,use,1
+/financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,where,1
+/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql,create,1
+/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql,go,1
+/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql,index,1
+/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql,on,1
+/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql,use,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,create,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,go,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,index,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,on,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,unique,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,use,1
+/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql,create unique index,1
+/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql,go,1
+/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql,on,1
+/financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql,use,1
+/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql,create,1
+/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql,go,1
+/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql,index,1
+/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql,on,1
+/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql,use,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,create,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,go,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,include,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,index,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,on,1
+/financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,use,1

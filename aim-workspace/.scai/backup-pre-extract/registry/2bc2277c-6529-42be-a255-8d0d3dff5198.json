@@ -1,0 +1,46 @@
+{
+  "codeStatus": {
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "341a180c-0f3a-4066-8637-ccb6e60b45a7"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "converted": {
+      "checksum": "7fa9a7c6286a6e72a7b9467fa0d52b90",
+      "path": "snowflake/UDF Helpers/TRANSFORM_SP_EXECUTE_SQL_STRING_UDF.sql"
+    }
+  },
+  "id": "2bc2277c-6529-42be-a255-8d0d3dff5198",
+  "inScope": true,
+  "isMissing": false,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "target": {
+    "canonicalName": "<%AIM_DB%>.PUBLIC.TRANSFORM_SP_EXECUTE_SQL_STRING_UDF",
+    "database": "<%AIM_DB%>",
+    "name": "TRANSFORM_SP_EXECUTE_SQL_STRING_UDF",
+    "objectType": "function",
+    "schema": "PUBLIC"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

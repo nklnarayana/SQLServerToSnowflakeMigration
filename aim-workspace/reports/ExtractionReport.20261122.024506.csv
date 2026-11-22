@@ -1,0 +1,2 @@
+OBJECT_NAME,OBJECT_TYPE,SCHEMA,FILE_PATH,STATUS,ERROR_MESSAGE
+FinancialPlanning.Planning.CostCenterHistory,Table,Planning,/Users/lakshmi/Projects/snowflake-migration/aim-workspace/artifacts/source_raw/financialplanning/planning/table/costcenterhistory.sql,Extracted,

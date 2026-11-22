@@ -1,0 +1,267 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": true,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "UPDATE",
+          "SELECT - JOIN",
+          "INSERT"
+        ]
+      },
+      {
+        "id": "28dafc15-8dcc-4a76-b077-27bddf421275",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM"
+        ]
+      },
+      {
+        "id": "8e7c23a9-b766-433b-8142-659d7310c9ad",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN",
+          "SELECT - FROM"
+        ]
+      },
+      {
+        "id": "f42bb57b-0b2f-49e5-b4d9-70c5043f177e",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - COLUMN"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/procedure/usp_executecostallocation"
+    },
+    "converted": {
+      "checksum": "c3f7cbd5a52a6ebc7be51bd1ca706431",
+      "path": "snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql"
+    },
+    "source": {
+      "checksum": "ca342e5755fe6aef36a338d0931cae2f",
+      "path": "source/financial_planning/planning/procedure/usp_executecostallocation.sql"
+    }
+  },
+  "id": "9cf31ef4-0461-4c2b-9112-b4fe61dd576d",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-TS0089",
+      "count": 1,
+      "severity": "low"
+    },
+    {
+      "code": "SSC-EWI-TS0075",
+      "count": 3,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-TS0094",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-0021",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-0073",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-FDM-0041",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0029",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0186",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 4
+    },
+    {
+      "code": "SSC-FDM-0002",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0023",
+      "count": 2
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 4,
+    "wave": 1,
+    "waveRank": 5
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@BudgetHeaderID",
+          "required": true,
+          "targetName": "BUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@AllocationRuleIDs",
+          "required": false,
+          "targetName": "ALLOCATIONRESULTS",
+          "targetType": "ARRAY",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@FiscalPeriodID",
+          "required": false,
+          "targetName": "ROWSALLOCATED",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@DryRun",
+          "required": false,
+          "targetName": "WARNINGMESSAGES",
+          "targetType": "STRING",
+          "type": "BIT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@MaxIterations",
+          "required": false,
+          "targetName": "ALLOCATIONRULEIDS",
+          "targetType": "STRING",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ThrottleDelayMS",
+          "required": false,
+          "targetName": "FISCALPERIODID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ConcurrencyMode",
+          "required": false,
+          "targetName": "DRYRUN",
+          "targetType": "BOOLEAN",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@AllocationResults",
+          "required": true,
+          "targetName": "MAXITERATIONS",
+          "targetType": "INT",
+          "type": "PLANNING.ALLOCATIONRESULTTABLETYPE"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@RowsAllocated",
+          "required": false,
+          "targetName": "THROTTLEDELAYMS",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@WarningMessages",
+          "required": false,
+          "targetName": "CONCURRENCYMODE",
+          "targetType": "STRING",
+          "type": "NVARCHAR"
+        }
+      ],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.usp_ExecuteCostAllocation(INT,VARCHAR,INT,BIT,INT,INT,VARCHAR,PLANNING.ALLOCATIONRESULTTABLETYPE,INT,NVARCHAR)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "usp_ExecuteCostAllocation",
+    "objectType": "procedure",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.usp_ExecuteCostAllocation(INT,ARRAY,INT,STRING,STRING,INT,BOOLEAN,INT,INT,STRING)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "usp_ExecuteCostAllocation",
+    "objectType": "procedure",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

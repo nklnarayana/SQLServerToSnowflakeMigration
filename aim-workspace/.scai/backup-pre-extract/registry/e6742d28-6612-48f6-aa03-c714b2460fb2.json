@@ -1,0 +1,69 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/type/budgetlineitemtabletype"
+    },
+    "converted": {
+      "checksum": "44d9d68b389a215eb14a11c170916996",
+      "path": "snowflake/financial_planning/planning/type/budgetlineitemtabletype.sql"
+    },
+    "source": {
+      "checksum": "ead6ad5726cecd727f66a40fb1692048",
+      "path": "source/financial_planning/planning/type/budgetlineitemtabletype.sql"
+    }
+  },
+  "id": "e6742d28-6612-48f6-aa03-c714b2460fb2",
+  "inScope": true,
+  "isMissing": false,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.BudgetLineItemTableType",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "BudgetLineItemTableType",
+    "objectType": "type",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "FINANCIAL_PLANNING.Planning.BudgetLineItemTableType",
+    "database": "FINANCIAL_PLANNING",
+    "format": "snowflakeSQL",
+    "name": "BudgetLineItemTableType",
+    "objectType": "type",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

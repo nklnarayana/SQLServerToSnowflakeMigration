@@ -1,0 +1,291 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "32a0d055-6833-4e88-b89f-d42654961d95",
+      "341a180c-0f3a-4066-8637-ccb6e60b45a7",
+      "4f435dc1-0e76-4d45-9a98-8cebea10e5f1",
+      "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+      "6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e",
+      "8457e8ae-1296-404e-9984-618879db26c6",
+      "bf51f7bf-d70a-47ad-9eab-aba1ff0a0fb9",
+      "e90d3531-dc33-4d8c-86fc-fd1dc3e52279"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/budgetheader"
+    },
+    "converted": {
+      "checksum": "37d8614ae1368c9781c40d242d537e80",
+      "path": "snowflake/financial_planning/planning/table/budgetheader.sql"
+    },
+    "source": {
+      "checksum": "4862a01d44841c8f74c6e79dc6d052a1",
+      "path": "source/financial_planning/planning/table/budgetheader.sql"
+    }
+  },
+  "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 1,
+    "wave": 1,
+    "waveRank": 2
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "BudgetHeaderID",
+        "nullable": false,
+        "targetName": "BudgetHeaderID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetCode",
+        "nullable": false,
+        "targetName": "BudgetCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetName",
+        "nullable": false,
+        "targetName": "BudgetName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BudgetType",
+        "nullable": false,
+        "targetName": "BudgetType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ScenarioType",
+        "nullable": false,
+        "targetName": "ScenarioType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "FiscalYear",
+        "nullable": false,
+        "targetName": "FiscalYear",
+        "targetType": "SMALLINT",
+        "type": "SMALLINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "StartPeriodID",
+        "nullable": false,
+        "targetName": "StartPeriodID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EndPeriodID",
+        "nullable": false,
+        "targetName": "EndPeriodID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "BaseBudgetHeaderID",
+        "nullable": true,
+        "targetName": "BaseBudgetHeaderID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "StatusCode",
+        "nullable": false,
+        "targetName": "StatusCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "SubmittedByUserID",
+        "nullable": true,
+        "targetName": "SubmittedByUserID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "SubmittedDateTime",
+        "nullable": true,
+        "targetName": "SubmittedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ApprovedByUserID",
+        "nullable": true,
+        "targetName": "ApprovedByUserID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ApprovedDateTime",
+        "nullable": true,
+        "targetName": "ApprovedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "LockedDateTime",
+        "nullable": true,
+        "targetName": "LockedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsLocked",
+        "nullable": true,
+        "targetName": "VersionNumber",
+        "targetType": "INT",
+        "type": "EXACTNUMERIC"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "VersionNumber",
+        "nullable": false,
+        "targetName": "Notes",
+        "targetType": "NVARCHAR",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "Notes",
+        "nullable": true,
+        "targetName": "ExtendedProperties",
+        "targetType": "VARIANT",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ExtendedProperties",
+        "nullable": true,
+        "targetName": "CreatedDateTime",
+        "targetType": "",
+        "type": "XML"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreatedDateTime",
+        "nullable": false,
+        "targetName": "ModifiedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ModifiedDateTime",
+        "nullable": false,
+        "type": "DATETIME2"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.BudgetHeader",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "BudgetHeader",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.BudgetHeader",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "BudgetHeader",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

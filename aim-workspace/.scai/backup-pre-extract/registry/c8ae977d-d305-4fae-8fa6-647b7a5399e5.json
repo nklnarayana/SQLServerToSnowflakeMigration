@@ -1,0 +1,69 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/type/hierarchynodetabletype"
+    },
+    "converted": {
+      "checksum": "1813522b3696837cba5658eece149a49",
+      "path": "snowflake/financial_planning/planning/type/hierarchynodetabletype.sql"
+    },
+    "source": {
+      "checksum": "636d271699de44409924379acaba3ef8",
+      "path": "source/financial_planning/planning/type/hierarchynodetabletype.sql"
+    }
+  },
+  "id": "c8ae977d-d305-4fae-8fa6-647b7a5399e5",
+  "inScope": true,
+  "isMissing": false,
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.HierarchyNodeTableType",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "HierarchyNodeTableType",
+    "objectType": "type",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "FINANCIAL_PLANNING.Planning.HierarchyNodeTableType",
+    "database": "FINANCIAL_PLANNING",
+    "format": "snowflakeSQL",
+    "name": "HierarchyNodeTableType",
+    "objectType": "type",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

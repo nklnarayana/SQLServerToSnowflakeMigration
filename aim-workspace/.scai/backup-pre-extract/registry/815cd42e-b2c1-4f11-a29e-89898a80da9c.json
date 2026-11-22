@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics"
+    },
+    "converted": {
+      "checksum": "ecb7245d36bd8509ab4034c26bc8f157",
+      "path": "snowflake/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql"
+    },
+    "source": {
+      "checksum": "7dad8bc53e320787146a2880e80159d8",
+      "path": "source/financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql"
+    }
+  },
+  "id": "815cd42e-b2c1-4f11-a29e-89898a80da9c",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.NCCI_BudgetLineItem_Analytics",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "NCCI_BudgetLineItem_Analytics",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.NCCI_BudgetLineItem_Analytics",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "NCCI_BudgetLineItem_Analytics",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

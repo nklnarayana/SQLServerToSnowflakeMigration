@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "epoch": 0,
+  "next_seq": 4,
+  "jobs": [
+    {
+      "job_id": "t-4cf76ee66d1c",
+      "kind": "test_run",
+      "params": {
+        "job_id": "t-4cf76ee66d1c",
+        "mode": "capture",
+        "object_ids": [
+          "341a180c-0f3a-4066-8637-ccb6e60b45a7"
+        ]
+      },
+      "launcher_pid": 45744,
+      "last_status": "failed",
+      "summary": "capture: Error [INT0002]: sqlserver dependencies not available: dlopen(/Users/lakshmi/.snowflake/scai/python/venv/lib/python3.12/site-packages/pyodbc.cpython-312-darwin.so, 0x0002): Library not loaded: /opt/homebrew/opt/unixodbc/lib/libodbc.2.dylib",
+      "terminal": true,
+      "failed": true,
+      "started_unix": 1795317692,
+      "updated_unix": 1795317702
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "80578ae0-78f4-4fc0-aef1-5c8d1b58f264",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795309443,
+      "yielded_unix": 1795310043,
+      "updated_unix": 1795309443
+    },
+    {
+      "agent_id": "28f1639c-9441-4c12-904f-c8ee83e029a2",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795309443,
+      "yielded_unix": 1795310043,
+      "updated_unix": 1795309443
+    },
+    {
+      "agent_id": "471618f9-249d-48b7-bfd0-a9a49f91e308",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795309443,
+      "yielded_unix": 1795310043,
+      "updated_unix": 1795309443
+    },
+    {
+      "agent_id": "fb2f17cb-c3a8-40ec-aeba-c288b2b14652",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795309443,
+      "yielded_unix": 1795310043,
+      "updated_unix": 1795309443
+    },
+    {
+      "agent_id": "b019d934-8c63-43c7-92c6-2a50a262934b",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795309443,
+      "yielded_unix": 1795310043,
+      "updated_unix": 1795309443
+    },
+    {
+      "agent_id": "9b3b2920-6dc5-4713-833d-7a2452a79888",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795309443,
+      "yielded_unix": 1795310043,
+      "updated_unix": 1795309443
+    },
+    {
+      "agent_id": "42c1e96e-a59c-40ae-9727-f10647d7f33a",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310067,
+      "yielded_unix": 1795310667,
+      "updated_unix": 1795310067
+    },
+    {
+      "agent_id": "73382427-8e75-4ce0-a3ac-6d7252eb128e",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310067,
+      "yielded_unix": 1795310667,
+      "updated_unix": 1795310067
+    },
+    {
+      "agent_id": "580c8a72-5817-46bf-8768-4c9b307b325c",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310067,
+      "yielded_unix": 1795310667,
+      "updated_unix": 1795310067
+    },
+    {
+      "agent_id": "6f6bc143-436e-475e-936c-b97876f552e7",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310067,
+      "yielded_unix": 1795310667,
+      "updated_unix": 1795310067
+    },
+    {
+      "agent_id": "69fd0415-9358-4848-9dc1-3f27a72558cc",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310067,
+      "yielded_unix": 1795310667,
+      "updated_unix": 1795310067
+    },
+    {
+      "agent_id": "8ac4b930-baf8-4d4a-9c22-91233ad5ff1e",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310067,
+      "yielded_unix": 1795310667,
+      "updated_unix": 1795310067
+    },
+    {
+      "agent_id": "a21165f3-b2b1-4200-affa-f7cba40d7e14",
+      "agent_type": "general-purpose",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795310098,
+      "yielded_unix": 1795310699,
+      "updated_unix": 1795310098
+    },
+    {
+      "agent_id": "74e993e9-f1dd-485d-9938-a5525c52afd6",
+      "agent_type": "business_logic",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795317398,
+      "yielded_unix": 1795317486,
+      "updated_unix": 1795317486
+    },
+    {
+      "agent_id": "6c9222b8-6e97-4f9d-8122-29d38bc48d4a",
+      "agent_type": "edge_cases",
+      "role": "helper",
+      "status": "idle",
+      "last_tool": "query_source",
+      "started_unix": 1795317398,
+      "yielded_unix": 1795317542,
+      "updated_unix": 1795317542,
+      "last_tool_unix": 1795317451
+    },
+    {
+      "agent_id": "18af2e4a-5adb-4ca7-94ec-e271c37776f6",
+      "agent_type": "data_driven",
+      "role": "helper",
+      "status": "idle",
+      "started_unix": 1795317398,
+      "yielded_unix": 1795317483,
+      "updated_unix": 1795317483
+    }
+  ],
+  "spawned_by": {
+    "18af2e4a-5adb-4ca7-94ec-e271c37776f6": "2021f224-cd53-46c4-b8af-6e632d18b821",
+    "74e993e9-f1dd-485d-9938-a5525c52afd6": "2021f224-cd53-46c4-b8af-6e632d18b821",
+    "6c9222b8-6e97-4f9d-8122-29d38bc48d4a": "2021f224-cd53-46c4-b8af-6e632d18b821"
+  },
+  "sf_actions": [
+    {
+      "agent_id": "18af2e4a-5adb-4ca7-94ec-e271c37776f6",
+      "action": "subagent_stop",
+      "detail": {
+        "agent_type": "data_driven"
+      }
+    },
+    {
+      "agent_id": "74e993e9-f1dd-485d-9938-a5525c52afd6",
+      "action": "subagent_stop",
+      "detail": {
+        "agent_type": "business_logic"
+      }
+    },
+    {
+      "agent_id": "6c9222b8-6e97-4f9d-8122-29d38bc48d4a",
+      "action": "subagent_stop",
+      "detail": {
+        "agent_type": "edge_cases"
+      }
+    }
+  ]
+}

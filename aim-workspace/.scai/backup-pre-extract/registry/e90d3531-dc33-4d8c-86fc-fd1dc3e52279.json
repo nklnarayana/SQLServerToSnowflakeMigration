@@ -1,0 +1,370 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN",
+          "SELECT - FROM"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "INSERT",
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "163129a6-c4a0-4782-9b70-a8bbb647f264",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM",
+          "INSERT"
+        ]
+      },
+      {
+        "id": "eeb853de-e71f-41f1-be04-65a8c2864a2f",
+        "isMissing": false,
+        "relationTypes": []
+      },
+      {
+        "id": "d760008e-b25f-4499-b83e-80db94a21239",
+        "isMissing": false,
+        "relationTypes": []
+      },
+      {
+        "id": "7a875570-3f93-48c3-a03e-a7f90e7c994c",
+        "isMissing": false,
+        "relationTypes": []
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/procedure/usp_generaterollingforecast"
+    },
+    "converted": {
+      "checksum": "d04f5c3c3c33794b75bde4b07aaadf32",
+      "path": "snowflake/financial_planning/planning/procedure/usp_generaterollingforecast.sql"
+    },
+    "source": {
+      "checksum": "31bfdb2d6192a4127a71830baf656152",
+      "path": "source/financial_planning/planning/procedure/usp_generaterollingforecast.sql"
+    }
+  },
+  "id": "e90d3531-dc33-4d8c-86fc-fd1dc3e52279",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-TS0133",
+      "count": 1,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-0021",
+      "count": 2,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-FDM-TS0029",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-0009",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-0002",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0186",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0157",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0179",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0023",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0143",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@BaseBudgetHeaderID",
+          "required": true,
+          "targetName": "BASEBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@HistoricalPeriods",
+          "required": false,
+          "targetName": "HISTORICALPERIODS",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ForecastPeriods",
+          "required": false,
+          "targetName": "FORECASTPERIODS",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ForecastMethod",
+          "required": false,
+          "targetName": "FORECASTMETHOD",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@SeasonalityJSON",
+          "required": false,
+          "targetName": "SEASONALITYJSON",
+          "targetType": "STRING",
+          "type": "NVARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@GrowthRateOverride",
+          "required": false,
+          "targetName": "GROWTHRATEOVERRIDE",
+          "targetType": "DECIMAL",
+          "type": "DECIMAL"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ConfidenceLevel",
+          "required": false,
+          "targetName": "CONFIDENCELEVEL",
+          "targetType": "DECIMAL",
+          "type": "DECIMAL"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@OutputFormat",
+          "required": false,
+          "targetName": "OUTPUTFORMAT",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@TargetBudgetHeaderID",
+          "required": false,
+          "targetName": "TARGETBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@ForecastAccuracyMetrics",
+          "required": false,
+          "targetName": "FORECASTACCURACYMETRICS",
+          "targetType": "STRING",
+          "type": "NVARCHAR"
+        }
+      ],
+      "returns": [
+        {
+          "name": "AccountType",
+          "targetName": "SOURCEFISCALYEAR_VALUE",
+          "targetType": "SMALLINT",
+          "type": "CHAR"
+        },
+        {
+          "name": "FiscalYear",
+          "targetName": "SOURCESTARTPERIOD_VALUE",
+          "targetType": "INT",
+          "type": "SMALLINT"
+        },
+        {
+          "name": "FiscalQuarter",
+          "targetName": "AccountType",
+          "targetType": "CHAR",
+          "type": "TINYINT"
+        },
+        {
+          "name": "TotalForecast",
+          "targetName": "FiscalYear",
+          "targetType": "SMALLINT",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "TotalLowerBound",
+          "targetName": "FiscalQuarter",
+          "targetType": "TINYINT",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "TotalUpperBound",
+          "targetName": "TotalForecast",
+          "targetType": "EXACTNUMERIC",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "ForecastMethod",
+          "targetName": "TotalLowerBound",
+          "targetType": "EXACTNUMERIC",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "HistoricalPeriods",
+          "targetName": "TotalUpperBound",
+          "targetType": "EXACTNUMERIC",
+          "type": "INT"
+        },
+        {
+          "name": "ForecastPeriods",
+          "targetName": "ForecastMethod",
+          "type": "INT"
+        },
+        {
+          "name": "ActualDataPoints",
+          "targetName": "HistoricalPeriods",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ForecastDataPoints",
+          "targetName": "ForecastPeriods",
+          "type": "INTEGER"
+        },
+        {
+          "name": "MeanAbsoluteResidual",
+          "targetName": "ActualDataPoints",
+          "targetType": "EXACTNUMERIC",
+          "type": "STRING"
+        },
+        {
+          "name": "HistoricalStdDev",
+          "targetName": "ForecastDataPoints",
+          "targetType": "EXACTNUMERIC",
+          "type": "FLOAT"
+        },
+        {
+          "name": "ExecutionTimeMs",
+          "targetName": "MeanAbsoluteResidual",
+          "targetType": "APROXNUMERIC",
+          "type": "INTEGER"
+        },
+        {
+          "name": "Status",
+          "targetName": "HistoricalStdDev",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "ErrorNumber",
+          "targetName": "ExecutionTimeMs",
+          "type": "INTEGER"
+        },
+        {
+          "name": "ErrorMessage",
+          "targetName": "Status",
+          "targetType": "STRING",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "ErrorLine",
+          "targetName": "ErrorNumber",
+          "targetType": "EXACTNUMERIC",
+          "type": "INTEGER"
+        }
+      ]
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.usp_GenerateRollingForecast(INT,INT,INT,VARCHAR,NVARCHAR,DECIMAL,DECIMAL,VARCHAR,INT,NVARCHAR)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "usp_GenerateRollingForecast",
+    "objectType": "procedure",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.usp_GenerateRollingForecast(INT,INT,INT,STRING,STRING,DECIMAL,DECIMAL,STRING,INT,STRING)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "usp_GenerateRollingForecast",
+    "objectType": "procedure",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

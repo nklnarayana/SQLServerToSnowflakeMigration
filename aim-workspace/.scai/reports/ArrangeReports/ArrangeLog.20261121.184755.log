@@ -1,0 +1,23 @@
+[11/21/2026 6:47:55 PM] Info: ========================================
+[11/21/2026 6:47:55 PM] Info: Starting Arrange-Only Mode
+[11/21/2026 6:47:55 PM] Info: ========================================
+[11/21/2026 6:47:55 PM] Info: Input Path: /Users/lakshmi/Projects/snowflake-migration/aim-workspace/artifacts/source_raw/20261122.024755_engine
+[11/21/2026 6:47:55 PM] Info: Output Path: /Users/lakshmi/Projects/snowflake-migration/aim-workspace/artifacts/source_raw/20261122.024755_engine_Processed
+[11/21/2026 6:47:55 PM] Info: Source Language: Transact
+[11/21/2026 6:47:55 PM] Info: ========================================
+[11/21/2026 6:47:59 PM] Info: Preprocessing Code: STARTED
+[11/21/2026 6:47:59 PM] Info: Executing 'SQL Split TLO Task'
+[11/21/2026 6:47:59 PM] Info: Preprocessing file CostCenterHistory.sql
+[11/21/2026 6:47:59 PM] Info: Splitting CostCenterHistory table: STARTED
+[11/21/2026 6:47:59 PM] Info: Splitting CostCenterHistory table: DONE
+[11/21/2026 6:47:59 PM] Info: ========================================
+[11/21/2026 6:47:59 PM] Info: Arrange Summary
+[11/21/2026 6:47:59 PM] Info: ========================================
+[11/21/2026 6:47:59 PM] Info: Identified 1 object(s) across 1 type(s):
+[11/21/2026 6:47:59 PM] Info:   - table: 1
+[11/21/2026 6:47:59 PM] Info: ========================================
+[11/21/2026 6:47:59 PM] Info: Preprocessing Code: COMPLETED
+[11/21/2026 6:47:59 PM] Info: ========================================
+[11/21/2026 6:47:59 PM] Info: Arrange-Only Mode Completed Successfully
+[11/21/2026 6:47:59 PM] Info: Arranged code available at: /Users/lakshmi/Projects/snowflake-migration/aim-workspace/artifacts/source_raw/20261122.024755_engine_Processed
+[11/21/2026 6:47:59 PM] Info: ========================================

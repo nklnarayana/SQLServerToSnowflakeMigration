@@ -1,0 +1,280 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "04e8f1ca-14ee-4f42-b004-2254463f671b",
+      "32a0d055-6833-4e88-b89f-d42654961d95",
+      "341a180c-0f3a-4066-8637-ccb6e60b45a7",
+      "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+      "9cf31ef4-0461-4c2b-9112-b4fe61dd576d",
+      "e90d3531-dc33-4d8c-86fc-fd1dc3e52279",
+      "f42bb57b-0b2f-49e5-b4d9-70c5043f177e",
+      "f6ea4fac-78c8-4014-8da2-1c3cb9931501",
+      "f825c098-6734-4c8c-8a36-5f65496859f7",
+      "fb418328-eaf8-4d0e-b5ff-41b0ffd83c13",
+      "fec044c6-5203-4597-84fa-9549a2c04bef"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/glaccount"
+    },
+    "converted": {
+      "checksum": "78cf1d426617af55ecd08f99d1b0a32c",
+      "path": "snowflake/financial_planning/planning/table/glaccount.sql"
+    },
+    "source": {
+      "checksum": "71baede010234ae2b2251d84dbdb08f5",
+      "path": "source/financial_planning/planning/table/glaccount.sql"
+    }
+  },
+  "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 2
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 0,
+    "wave": 1,
+    "waveRank": 1
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "GLAccountID",
+        "nullable": false,
+        "targetName": "GLAccountID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountNumber",
+        "nullable": false,
+        "targetName": "AccountNumber",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountName",
+        "nullable": false,
+        "targetName": "AccountName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountType",
+        "nullable": false,
+        "targetName": "AccountType",
+        "targetType": "CHAR",
+        "type": "CHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountSubType",
+        "nullable": true,
+        "targetName": "AccountSubType",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ParentAccountID",
+        "nullable": true,
+        "targetName": "ParentAccountID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AccountLevel",
+        "nullable": false,
+        "targetName": "AccountLevel",
+        "targetType": "TINYINT",
+        "type": "TINYINT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsPostable",
+        "nullable": false,
+        "targetName": "IsPostable",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsBudgetable",
+        "nullable": false,
+        "targetName": "IsBudgetable",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsStatistical",
+        "nullable": false,
+        "targetName": "IsStatistical",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "NormalBalance",
+        "nullable": false,
+        "targetName": "NormalBalance",
+        "targetType": "CHAR",
+        "type": "CHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CurrencyCode",
+        "nullable": false,
+        "targetName": "CurrencyCode",
+        "targetType": "CHAR",
+        "type": "CHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ConsolidationAccountID",
+        "nullable": true,
+        "targetName": "ConsolidationAccountID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IntercompanyFlag",
+        "nullable": false,
+        "targetName": "IntercompanyFlag",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsActive",
+        "nullable": false,
+        "targetName": "IsActive",
+        "targetType": "BOOLEAN",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CreatedDateTime",
+        "nullable": false,
+        "targetName": "CreatedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ModifiedDateTime",
+        "nullable": false,
+        "targetName": "ModifiedDateTime",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "TaxCode",
+        "nullable": true,
+        "targetName": "TaxCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "StatutoryAccountCode",
+        "nullable": true,
+        "targetName": "StatutoryAccountCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IFRSAccountCode",
+        "nullable": true,
+        "targetName": "IFRSAccountCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.GLAccount",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "GLAccount",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.GLAccount",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "GLAccount",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

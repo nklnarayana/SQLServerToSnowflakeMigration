@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "f6ea4fac-78c8-4014-8da2-1c3cb9931501",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline"
+    },
+    "converted": {
+      "checksum": "56757b6c5482a2380c1c26e449a24d45",
+      "path": "snowflake/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql"
+    },
+    "source": {
+      "checksum": "2904b25ceadba1277409157dd6947535",
+      "path": "source/financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql"
+    }
+  },
+  "id": "17941e31-fa42-4e93-823d-8f016919f7c0",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.NCCI_ConsolidationJournalLine",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "NCCI_ConsolidationJournalLine",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.NCCI_ConsolidationJournalLine",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "NCCI_ConsolidationJournalLine",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

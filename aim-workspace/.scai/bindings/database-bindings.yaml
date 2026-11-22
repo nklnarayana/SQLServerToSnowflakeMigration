@@ -1,0 +1,6 @@
+source:
+  AIM_DB: AIM_DB
+  financial_planning: FinancialPlanning
+snow:
+  AIM_DB: AIM_DB
+  financial_planning: financial_planning

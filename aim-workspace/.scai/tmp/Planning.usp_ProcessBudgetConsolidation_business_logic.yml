@@ -1,0 +1,10 @@
+test_cases:
+  - [1, null, "FULL", 1, 1, null, 101, 0, null, null]            # expects rows: happy path - header 1 is APPROVED, target NULL creates the CONSOL header and inserts line items
+  - [1, 2, "FULL", 1, 1, null, 101, 0, null, null]               # expects rows: supplied target branch - header 2 exists, so no header insert, lines land on header 2
+  - [1, null, "INCREMENTAL", 0, 1, null, 101, 0, null, null]      # expects rows: IncludeEliminations=0 skips the elimination cursor, allocations still recalculated
+  - [1, null, "DELTA", 1, 0, null, 101, 0, null, null]            # expects rows: RecalculateAllocations=0 takes the ELSE 'Initialize Final Amounts' UPDATE
+  - [1, null, "FULL", 1, 1, "<Options><IncludeZeroBalances>0</IncludeZeroBalances><RoundingPrecision>2</RoundingPrecision></Options>", 101, 0, null, null]  # expects rows: ProcessingOptions XML present - both REPLACE branches rewrite the dynamic SQL
+  - [1, null, "FULL", 1, 1, "<Options><IncludeZeroBalances>1</IncludeZeroBalances></Options>", 101, 1, null, null]  # expects rows: DebugMode=1 returns the processing log and inserted lines; RoundingPrecision missing so only the zero-balance branch is evaluated
+  - [2, null, "FULL", 0, 0, null, null, 0, null, null]            # expects rows: LOCKED source header 2 with UserID NULL - both optional phases skipped
+  - [3, null, "FULL", 1, 1, null, 101, 0, null, null]             # expects empty: header 3 is in DRAFT status - THROW 50001 'must be in APPROVED or LOCKED status'
+  - [999999, null, "FULL", 1, 1, null, 101, 0, null, null]        # expects empty: no BudgetHeader with this id - RAISERROR 'Source budget header not found'

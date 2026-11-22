@@ -1,0 +1,155 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM",
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "9cf31ef4-0461-4c2b-9112-b4fe61dd576d"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/function/fn_getallocationfactor"
+    },
+    "converted": {
+      "checksum": "2fdf6ceb646ab2db90ff638337e9c342",
+      "path": "snowflake/financial_planning/planning/function/fn_getallocationfactor.sql"
+    },
+    "source": {
+      "checksum": "4bd32c08cb1958c65394c0d91bdad38f",
+      "path": "source/financial_planning/planning/function/fn_getallocationfactor.sql"
+    }
+  },
+  "id": "f42bb57b-0b2f-49e5-b4d9-70c5043f177e",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-TS0095",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@SourceCostCenterID",
+          "required": true,
+          "targetName": "SOURCECOSTCENTERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@TargetCostCenterID",
+          "required": true,
+          "targetName": "TARGETCOSTCENTERID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@AllocationBasis",
+          "required": true,
+          "targetName": "ALLOCATIONBASIS",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@FiscalPeriodID",
+          "required": true,
+          "targetName": "P_FISCALPERIODID",
+          "targetType": "INT",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@BudgetHeaderID",
+          "required": false,
+          "targetName": "P_BUDGETHEADERID",
+          "targetType": "INT",
+          "type": "INT"
+        }
+      ],
+      "returns": [
+        {
+          "targetType": "DECIMAL",
+          "type": "DECIMAL"
+        }
+      ]
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.fn_GetAllocationFactor(INT,INT,VARCHAR,INT,INT)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "fn_GetAllocationFactor",
+    "objectType": "function",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.fn_GetAllocationFactor(INT,INT,STRING,INT,INT)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "fn_GetAllocationFactor",
+    "objectType": "function",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

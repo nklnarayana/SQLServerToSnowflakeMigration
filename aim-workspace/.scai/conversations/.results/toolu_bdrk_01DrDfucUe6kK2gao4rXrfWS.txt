@@ -1,0 +1,196 @@
+Bash command `cd /Users/lakshmi/Projects/snowflake-migration/aim-workspace && python3 -c "
+import json
+d=json.load(open('artifacts/assessment/conversion-issues.json'))
+p=[x for x in d['panels'] if x['id']=='summary'][0]
+for r in p['rows']:
+    s=r.get('sample') or {}
+    print('|RANK',r['rank'],'|CODE',r['code'],'|NAME',r.get('name'))
+    print('   TYPE',r.get('issue_type'),'| COUNT',r['count'],'| OBJTYPES',r.get('object_types'))
+    print('   DESC:',(r.get('description') or '')[:300])
+    if isinstance(s,dict):
+        print('   SAMPLE:',{k:str(v)[:200] for k,v in s.items()})
+    print()
+"` with description `Dump full details of each issue pair` returned output: |RANK 1 |CODE SSC-EWI-0108 |NAME This subquery matches a pattern considered invalid and may cause compilation errors
+   TYPE EWI | COUNT 17 | OBJTYPES ['Procedure']
+   DESC: THE FOLLOWING SUBQUERY MATCHES AT LEAST ONE OF THE PATTERNS CONSIDERED INVALID AND MAY PRODUCE COMPILATION ERRORS
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ReconcileIntercompanyBalances - Complex intercompany reconciliation with XML reporting\n    \n    Dependencies:\n        - Tables: BudgetLineItem, ConsolidationJou', 'converted_excerpt': "                                :EFFECTIVEDATE BETWEEN PeriodStartDate AND PeriodEndDate\n                    ),\n                    :EFFECTIVEDATE,\n                    'Auto-generated intercompany rec"}
+
+|RANK 2 |CODE SSC-EWI-TS0041 |NAME XML data type methods are not supported in Snowflake.
+   TYPE EWI | COUNT 6 | OBJTYPES ['View']
+   DESC: XML TYPE METHOD value IS NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/view/vw_allocationruletargets.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/view/vw_allocationruletargets.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n    \n    Challenges for Snowflake:\n  ', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n\n    Challenges for Snowflak'}
+
+|RANK 3 |CODE SSC-EWI-0021 |NAME Syntax not supported in Snowflake
+   TYPE EWI | COUNT 5 | OBJTYPES ['Procedure']
+   DESC: OUTPUT CLAUSE NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_executecostallocation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ExecuteCostAllocation - Step-down cost allocation with recursive dependencies\n    \n    Dependencies:\n        - Tables: AllocationRule, BudgetLineItem, CostCente', 'converted_excerpt': "                                TABLE(SPLIT_TO_TABLE(:ALLOCATIONRULEIDS, ','))\n                           ))\n                    ORDER BY ar.ExecutionSequence, bli.BudgetLineItemID;\n                  "}
+
+|RANK 4 |CODE SSC-EWI-TS0037 |NAME Snowflake Scripting only supports forward_only cursors
+   TYPE EWI | COUNT 3 | OBJTYPES ['Procedure']
+   DESC: SNOWFLAKE SCRIPTING CURSORS ARE NON-SCROLLABLE, ONLY FETCH NEXT IS SUPPORTED
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '        INCLUDEZEROBALANCES BOOLEAN;\n        ROUNDINGPRECISION INT;\n        INITFINALROWCOUNT INT;\n    BEGIN\n--        --** SSC-FDM-TS0029 - SET NOCOUNT STATEMENT IS COMMENTED OUT, WHICH IS NOT APPLIC'}
+
+|RANK 5 |CODE SSC-EWI-TS0106 |NAME CREATING TRANSACTION SAVEPOINTS IS NOT SUPPORTED IN SNOWFLAKE
+   TYPE EWI | COUNT 3 | OBJTYPES ['Procedure']
+   DESC: CREATING TRANSACTION SAVEPOINTS IS NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': "            FOR UPDATE OF bli.AdjustedAmount !!!RESOLVE EWI!!! /*** SSC-EWI-0073 - PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'UpdateOfColumnName' NODE ***/!!!; -- Updateable cursor\n\n        -- ======="}
+
+|RANK 6 |CODE SSC-EWI-TS0121 |NAME @@FETCH_STATUS has no Snowflake Scripting equivalent.
+   TYPE EWI | COUNT 3 | OBJTYPES ['Procedure']
+   DESC: @@FETCH_STATUS HAS NO SNOWFLAKE SCRIPTING EQUIVALENT. THIS REFERENCE WAS NOT CONSUMED BY THE CURSOR FOR LOOP CONVERSION AND HAS TO BE REDESIGNED MANUALLY.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '                        SELECT\n                            BudgetHeaderID AS TARGETBUDGETHEADERID_VALUE\n                        FROM\n                            T_InsertedHeaders\n                    )'}
+
+|RANK 7 |CODE SSC-EWI-0021 |NAME Syntax not supported in Snowflake
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: FOR CLAUSE NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_generaterollingforecast.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_generaterollingforecast.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_GenerateRollingForecast - Generates rolling forecast with statistical projections\n    \n    Dependencies:\n        - Tables: BudgetHeader, BudgetLineItem, FiscalP', 'converted_excerpt': '                    SUM(fw.ForecastAmount) AS TotalForecast,\n                    SUM(fw.LowerBound) AS TotalLowerBound,\n                    SUM(fw.UpperBound) AS TotalUpperBound\n                FROM\n '}
+
+|RANK 8 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'RollbackName' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_executecostallocation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ExecuteCostAllocation - Step-down cost allocation with recursive dependencies\n    \n    Dependencies:\n        - Tables: AllocationRule, BudgetLineItem, CostCente', 'converted_excerpt': '                                    ON ar.SourceBudgetLineItemID = bli.BudgetLineItemID;\n                        ROWSALLOCATED := SQLROWCOUNT;\n\n                        -- Mark source items as allocate'}
+
+|RANK 9 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'SELECT' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_performfinancialclose.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_performfinancialclose.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_PerformFinancialClose - Comprehensive period-end close orchestration procedure\n    \n    Dependencies:\n        - Tables: All tables in the Planning schema\n      ', 'converted_excerpt': '                                               ClosedByUserID = :CLOSINGUSERID,\n                                               ClosedDateTime = SYSDATE(),\n                                             '}
+
+|RANK 10 |CODE SSC-EWI-0125 |NAME Dynamic SQL variable back-propagation failed
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: SNOWCONVERT COULD NOT DETERMINE WHAT VALUE THIS VARIABLE HOLDS WHEN THE DYNAMIC SQL EXECUTES. THE ASSIGNMENT EXPRESSION WAS CONVERTED ON ITS OWN; PLEASE REVIEW THAT ITS VALUE IS COMPATIBLE WITH THE EXECUTE IMMEDIATE THAT USES IT.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '                            :PARTNERENTITYCODE;\n                    END LOOP;\n                    CLOSE EliminationCursor;\n--                    --** SSC-FDM-TS0057 - DEALLOCATE IS NOT REQUIRED IN SNO'}
+
+|RANK 11 |CODE SSC-EWI-TS0032 |NAME Bulk Insert Partially Translated
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: THE BULK INSERT WAS PART OF A DYNAMIC SQL, WHICH MAKES SOME OF THE TRANSLATED ELEMENTS INVALID UNLESS EXECUTED OUTSIDE DYNAMIC CODE.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_BulkImportBudgetData - Bulk import budget data with validation and transformation\n    \n    Dependencies:\n        - Tables: BudgetHeader, BudgetLineItem, GLAccou', 'converted_excerpt': '                    END IF;\n                    -- BULK INSERT - Very different in Snowflake (COPY INTO)\n                    IF (:FORMATFILEPATH IS NOT NULL) THEN\n                    BEGIN\n           '}
+
+|RANK 12 |CODE SSC-EWI-TS0075 |NAME Built-In Procedure Not Supported
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: TRANSLATION FOR BUILT-IN PROCEDURE 'sp_getapplock' IS NOT CURRENTLY SUPPORTED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_executecostallocation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ExecuteCostAllocation - Step-down cost allocation with recursive dependencies\n    \n    Dependencies:\n        - Tables: AllocationRule, BudgetLineItem, CostCente', 'converted_excerpt': '                     \n                     \n                     \n                     \n                     \n\n                    -- Temp tables for processing\n                    CREATE OR REPLACE T'}
+
+|RANK 13 |CODE SSC-EWI-TS0083 |NAME ROLLBACK TRANSACTION REQUIRES THE APPROPRIATE SETUP TO WORK AS INTENDED.
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: ROLLBACK TRANSACTION REQUIRES THE APPROPRIATE SETUP TO WORK AS INTENDED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '            WHERE\n                ca.FinalAmount IS NOT NULL;\n            TOTALROWSPROCESSED := :TOTALROWSPROCESSED + SQLROWCOUNT;\n            INSERT INTO T_PROCESSINGLOG (StepName, StartTime, EndTime'}
+
+|RANK 14 |CODE SSC-EWI-TS0089 |NAME SET {0} {1} is not supported in Snowflake.
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: SET XACT_ABORT OFF IS NOT SUPPORTED IN SNOWFLAKE.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_performfinancialclose.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_performfinancialclose.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_PerformFinancialClose - Comprehensive period-end close orchestration procedure\n    \n    Dependencies:\n        - Tables: All tables in the Planning schema\n      ', 'converted_excerpt': '    AS\n    $$\n        DECLARE\n            SC_EXIT_CODE VARCHAR;\n\n            -- =========================================================================\n            -- Declarations and initialization'}
+
+|RANK 15 |CODE SSC-EWI-TS0089 |NAME SET {0} {1} is not supported in Snowflake.
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: SET XACT_ABORT ON IS NOT SUPPORTED IN SNOWFLAKE.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_executecostallocation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ExecuteCostAllocation - Step-down cost allocation with recursive dependencies\n    \n    Dependencies:\n        - Tables: AllocationRule, BudgetLineItem, CostCente', 'converted_excerpt': '    ============================================================================\n    1. Recursive CTE with self-referencing updates\n    2. WAITFOR DELAY for throttling - No Snowflake equivalent\n    3.'}
+
+|RANK 16 |CODE SSC-EWI-TS0123 |NAME The type of a local variable has no Snowflake equivalent.
+   TYPE EWI | COUNT 2 | OBJTYPES ['Procedure']
+   DESC: THE DECLARED TYPE OF LOCAL VARIABLE '@EmptyAllocResults' HAS NO SNOWFLAKE EQUIVALENT. THE DECLARATION AND EVERY REFERENCE TO IT WERE LEFT AS WRITTEN AND HAVE TO BE REDESIGNED MANUALLY.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_performfinancialclose.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_performfinancialclose.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_PerformFinancialClose - Comprehensive period-end close orchestration procedure\n    \n    Dependencies:\n        - Tables: All tables in the Planning schema\n      ', 'converted_excerpt': '    ============================================================================\n*/\nCREATE OR REPLACE PROCEDURE Planning.usp_PerformFinancialClose\n    --** SSC-FDM-0041 - DEFAULT PARAMETERS WERE REORD'}
+
+|RANK 17 |CODE SSC-EWI-0058 |NAME Functionality is not currently supported by Snowflake Scripting
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: FUNCTIONALITY FOR 'FOR UPDATE' IS NOT CURRENTLY SUPPORTED BY SNOWFLAKE SCRIPTING
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '        INITFINALROWCOUNT INT;\n    BEGIN\n--        --** SSC-FDM-TS0029 - SET NOCOUNT STATEMENT IS COMMENTED OUT, WHICH IS NOT APPLICABLE IN SNOWFLAKE. **\n--        SET NOCOUNT ON;\n        !!!RESOLVE E'}
+
+|RANK 18 |CODE SSC-EWI-0068 |NAME User Defined function was transformed to a Snowflake procedure
+   TYPE EWI | COUNT 1 | OBJTYPES ['Function']
+   DESC: USER DEFINED FUNCTION WAS TRANSFORMED TO SNOWFLAKE PROCEDURE BECAUSE IT CONTAINS THE FOLLOWING: SELECT. A PROCEDURE CANNOT BE CALLED THE SAME WAY AS A FUNCTION, SO EVERY CALL SITE MUST BE REVIEWED AND UPDATED
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/function/fn_gethierarchypath.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/function/fn_gethierarchypath.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    fn_GetHierarchyPath - Builds the full hierarchy path string for a cost center\n    Dependencies: CostCenter\n    \n    Challenges for Snowflake:\n    - Recursive scalar', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    fn_GetHierarchyPath - Builds the full hierarchy path string for a cost center\n    Dependencies: CostCenter\n\n    Challenges for Snowflake:\n    - Recursive s'}
+
+|RANK 19 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'CursorProperties' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '--        --** SSC-FDM-TS0029 - SET NOCOUNT STATEMENT IS COMMENTED OUT, WHICH IS NOT APPLICABLE IN SNOWFLAKE. **\n--        SET NOCOUNT ON;\n        !!!RESOLVE EWI!!! /*** SSC-EWI-TS0089 - SET XACT_ABOR'}
+
+|RANK 20 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'HASHBYTES' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ReconcileIntercompanyBalances - Complex intercompany reconciliation with XML reporting\n    \n    Dependencies:\n        - Tables: BudgetLineItem, ConsolidationJou', 'converted_excerpt': "                    -- Release XML document\n                    !!!RESOLVE EWI!!! /*** SSC-EWI-TS0075 - TRANSLATION FOR BUILT-IN PROCEDURE 'sp_xml_removedocument' IS NOT CURRENTLY SUPPORTED. ***/!!!\n "}
+
+|RANK 21 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 1 | OBJTYPES ['Table']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'NEWSEQUENTIALID' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/table/consolidationjournal.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/table/consolidationjournal.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    ConsolidationJournal - Journal entries for consolidation adjustments\n    Dependencies: BudgetHeader, GLAccount, CostCenter, FiscalPeriod\n*/\nCREATE TABLE Planning.Co', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    ConsolidationJournal - Journal entries for consolidation adjustments\n    Dependencies: BudgetHeader, GLAccount, CostCenter, FiscalPeriod\n*/\n    -- ELIMINAT'}
+
+|RANK 22 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'SetLocalVariableStatement' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '                                        WHERE\n                                            GLAccountID = :ELIMACCOUNTID\n                                          AND CostCenterID = :ELIMCOSTCENTERID;\n '}
+
+|RANK 23 |CODE SSC-EWI-0073 |NAME Pending Functional Equivalence Review
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: PENDING FUNCTIONAL EQUIVALENCE REVIEW FOR 'UpdateOfColumnName' NODE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '            LogID INT IDENTITY(1,1) ORDER PRIMARY KEY,\n            StepName NVARCHAR(100),\n            StartTime TIMESTAMP_NTZ(7),\n            EndTime TIMESTAMP_NTZ(7),\n            RowsAffected INT,\n '}
+
+|RANK 24 |CODE SSC-EWI-TS0041 |NAME XML data type methods are not supported in Snowflake.
+   TYPE EWI | COUNT 1 | OBJTYPES ['View']
+   DESC: XML TYPE METHOD exist IS NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/view/vw_allocationruletargets.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/view/vw_allocationruletargets.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n    \n    Challenges for Snowflake:\n  ', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n\n    Challenges for Snowflak'}
+
+|RANK 25 |CODE SSC-EWI-TS0041 |NAME XML data type methods are not supported in Snowflake.
+   TYPE EWI | COUNT 1 | OBJTYPES ['View']
+   DESC: XML TYPE METHOD nodes IS NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/view/vw_allocationruletargets.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/view/vw_allocationruletargets.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n    \n    Challenges for Snowflake:\n  ', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n\n    Challenges for Snowflak'}
+
+|RANK 26 |CODE SSC-EWI-TS0041 |NAME XML data type methods are not supported in Snowflake.
+   TYPE EWI | COUNT 1 | OBJTYPES ['View']
+   DESC: XML TYPE METHOD query IS NOT SUPPORTED IN SNOWFLAKE
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/view/vw_allocationruletargets.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/view/vw_allocationruletargets.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n    \n    Challenges for Snowflake:\n  ', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n\n    Challenges for Snowflak'}
+
+|RANK 27 |CODE SSC-EWI-TS0075 |NAME Built-In Procedure Not Supported
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: TRANSLATION FOR BUILT-IN PROCEDURE 'sp_releaseapplock' IS NOT CURRENTLY SUPPORTED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_executecostallocation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ExecuteCostAllocation - Step-down cost allocation with recursive dependencies\n    \n    Dependencies:\n        - Tables: AllocationRule, BudgetLineItem, CostCente', 'converted_excerpt': '                                WHERE\n                                    bli.BudgetLineItemID = ar.SourceBudgetLineItemID;\n                    END;\n                    ELSE\n                    BEGIN\n'}
+
+|RANK 28 |CODE SSC-EWI-TS0075 |NAME Built-In Procedure Not Supported
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: TRANSLATION FOR BUILT-IN PROCEDURE 'sp_xml_preparedocument' IS NOT CURRENTLY SUPPORTED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ReconcileIntercompanyBalances - Complex intercompany reconciliation with XML reporting\n    \n    Dependencies:\n        - Tables: BudgetLineItem, ConsolidationJou', 'converted_excerpt': '    BEGIN\n--        --** SSC-FDM-TS0029 - SET NOCOUNT STATEMENT IS COMMENTED OUT, WHICH IS NOT APPLICABLE IN SNOWFLAKE. **\n--        SET NOCOUNT ON;\n        EFFECTIVEDATE := NVL(:RECONCILIATIONDATE, C'}
+
+|RANK 29 |CODE SSC-EWI-TS0075 |NAME Built-In Procedure Not Supported
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: TRANSLATION FOR BUILT-IN PROCEDURE 'sp_xml_removedocument' IS NOT CURRENTLY SUPPORTED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ReconcileIntercompanyBalances - Complex intercompany reconciliation with XML reporting\n    \n    Dependencies:\n        - Tables: BudgetLineItem, ConsolidationJou', 'converted_excerpt': '            Entity1Amount DECIMAL(19, 4) NOT NULL,\n            Entity2Amount DECIMAL(19, 4) NOT NULL,\n            Variance DECIMAL(19, 4) NOT NULL,\n            VariancePercent DECIMAL(8, 6) NULL,\n    '}
+
+|RANK 30 |CODE SSC-EWI-TS0082 |NAME CROSS APPLY has been converted to LEFT OUTER JOIN and requires manual validation.
+   TYPE EWI | COUNT 1 | OBJTYPES ['View']
+   DESC: CROSS APPLY HAS BEEN CONVERTED TO LEFT OUTER JOIN AND REQUIRES MANUAL VALIDATION.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/view/vw_allocationruletargets.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/view/vw_allocationruletargets.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n    \n    Challenges for Snowflake:\n  ', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    vw_AllocationRuleTargets - Parses XML target specifications from allocation rules\n    Dependencies: AllocationRule, CostCenter\n\n    Challenges for Snowflak'}
+
+|RANK 31 |CODE SSC-EWI-TS0086 |NAME OPENQUERY NODE NEEDS TO BE CHECKED.
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: OPENQUERY NODE NEEDS TO BE CHECKED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_BulkImportBudgetData - Bulk import budget data with validation and transformation\n    \n    Dependencies:\n        - Tables: BudgetHeader, BudgetLineItem, GLAccou', 'converted_excerpt': '                                CAST(VALUE:OriginalAmount AS NUMBER) AS OriginalAmount,\n                                CAST(VALUE:AdjustedAmount AS NUMBER) AS AdjustedAmount,\n                        '}
+
+|RANK 32 |CODE SSC-EWI-TS0094 |NAME WAITFOR DELAY variable may contain a time string incompatible with SYSTEM$WAIT
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: WAITFOR DELAY WITH VARIABLE ':WAITTIME' WAS CONVERTED TO SYSTEM$WAIT, BUT THE VARIABLE MAY CONTAIN A TIME STRING IN 'HH:MM:SS' FORMAT. SYSTEM$WAIT EXPECTS A NUMERIC VALUE IN SECONDS.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_executecostallocation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_executecostallocation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ExecuteCostAllocation - Step-down cost allocation with recursive dependencies\n    \n    Dependencies:\n        - Tables: AllocationRule, BudgetLineItem, CostCente', 'converted_excerpt': '                    FROM\n                        <%financial_planning%>.Planning.AllocationRule ar\n                        INNER JOIN\n                            LATERAL (\n                            '}
+
+|RANK 33 |CODE SSC-EWI-TS0115 |NAME The T-SQL session global has no Snowflake equivalent.
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: T-SQL SESSION GLOBAL '@@TRANCOUNT' HAS NO SNOWFLAKE EQUIVALENT. REPLACE IT WITH EXPLICIT STATE OR REDESIGN THE DEPENDENT LOGIC.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': '        RETURNCODE INT := 0;\n        TOTALROWSPROCESSED INT := 0;\n        BATCHSIZE INT := 5000;\n        CURRENTBATCH INT := 0;\n        MAXITERATIONS INT := 1000;\n        CONSOLIDATIONRUNID VARCHAR;\n '}
+
+|RANK 34 |CODE SSC-EWI-TS0133 |NAME Routine result set delivery was not preserved
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: RESULT SET DELIVERY FROM 'SqlWithCte' WAS NOT PRESERVED. THE ROUTINE WAS CONVERTED, BUT THIS SOURCE CONSTRUCT CAN RETURN ROWS THAT THE GENERATED SNOWFLAKE ROUTINE DOES NOT FORWARD TO ITS CALLER.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_generaterollingforecast.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_generaterollingforecast.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_GenerateRollingForecast - Generates rolling forecast with statistical projections\n    \n    Dependencies:\n        - Tables: BudgetHeader, BudgetLineItem, FiscalP', 'converted_excerpt': '                -- Dynamic PIVOT - Very different in Snowflake\n            BEGIN\n                     \n                     \n\n                    -- Build column list using FOR XML PATH\n              '}
+
+|RANK 35 |CODE SSC-EWI-TS0204 |NAME PENDING SNOWCONVERT AI TRANSLATION FOR A MULTI-STATEMENT TABLE-VALUED FUNCTION BODY THAT CANNOT BE EXPRESSED AS ONE QUERY: a table variable with a computed column or a table constraint
+   TYPE EWI | COUNT 1 | OBJTYPES ['Function']
+   DESC: PENDING SNOWCONVERT AI TRANSLATION FOR A MULTI-STATEMENT TABLE-VALUED FUNCTION BODY THAT CANNOT BE EXPRESSED AS ONE QUERY: a table variable with a computed column or a table constraint. THE FUNCTION BODY WAS NOT GENERATED.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    tvf_ExplodeCostCenterHierarchy - Multi-statement TVF to explode hierarchy\n    Dependencies: CostCenter\n    \n    Challenges for Snowflake:\n    - Multi-statement TVFs', 'converted_excerpt': 'USE DATABASE <%financial_planning%>;\n\n/*\n    tvf_ExplodeCostCenterHierarchy - Multi-statement TVF to explode hierarchy\n    Dependencies: CostCenter\n\n    Challenges for Snowflake:\n    - Multi-statement'}
+
+|RANK 36 |CODE SSC-EWI-TS0219 |NAME XACT_STATE() COMPARISON IS NOT SUPPORTED IN SNOWFLAKE
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: XACT_STATE() COMPARISON IS NOT SUPPORTED IN SNOWFLAKE. CURRENT_TRANSACTION() RETURNS A TRANSACTION ID, NOT A STATE CODE, AND SNOWFLAKE HAS NO UNCOMMITTABLE TRANSACTION STATE, SO ONLY COMPARISONS WITH 0 OR 1 HAVE AN EQUIVALENT.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_processbudgetconsolidation.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ProcessBudgetConsolidation - Complex budget consolidation with hierarchy rollup\n    \n    SnowConvert input: Effective definition after SQL Server patches 01-04 ', 'converted_excerpt': "                ca.GLAccountID,\n                ca.CostCenterID,\n                ca.FiscalPeriodID,\n                ca.FinalAmount,\n                0,\n                'CONSOLIDATED',\n                '"}
+
+|RANK 37 |CODE SSC-EWI-TS0225 |NAME OPENXML OVER A sp_xml_preparedocument HANDLE HAS NO SNOWFLAKE EQUIVALENT
+   TYPE EWI | COUNT 1 | OBJTYPES ['Procedure']
+   DESC: OPENXML OVER A sp_xml_preparedocument HANDLE HAS NO SNOWFLAKE EQUIVALENT. THE OPENXML_UDF CALL IS NOT WRAPPED IN TABLE(), RECEIVES THE HANDLE INSTEAD OF THE XML TEXT, RETURNS ONE VALUE COLUMN, NOT THE WITH SCHEMA OR EDGE TABLE, AND DROPS THE FLAGS.
+   SAMPLE: {'source_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/source/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'converted_path': '/Users/lakshmi/Projects/snowflake-migration/aim-workspace/snowflake/financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql', 'source_code': 'USE FINANCIAL_PLANNING;\n\nGO\n\n/*\n    usp_ReconcileIntercompanyBalances - Complex intercompany reconciliation with XML reporting\n    \n    Dependencies:\n        - Tables: BudgetLineItem, ConsolidationJou', 'converted_excerpt': '            Entity1Code VARCHAR(20) NOT NULL,\n            Entity2Code VARCHAR(20) NOT NULL,\n            GLAccountID INT NOT NULL,\n            PartnerAccountID INT NOT NULL,\n            Entity1Amount D'}

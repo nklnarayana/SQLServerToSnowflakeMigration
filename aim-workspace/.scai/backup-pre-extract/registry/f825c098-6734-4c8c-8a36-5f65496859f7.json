@@ -1,0 +1,80 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "INDEX"
+        ]
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/index/glaccount.ncci_glaccount_analytics"
+    },
+    "converted": {
+      "checksum": "b0e62bf708e503989df9ef2a02f54a68",
+      "path": "snowflake/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql"
+    },
+    "source": {
+      "checksum": "208020ed9c7f27dddbb4445ecb58ba0f",
+      "path": "source/financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql"
+    }
+  },
+  "id": "f825c098-6734-4c8c-8a36-5f65496859f7",
+  "inScope": false,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 1
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": []
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.NCCI_GLAccount_Analytics",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "NCCI_GLAccount_Analytics",
+    "objectType": "index",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.UNKNOWN_SCHEMA.NCCI_GLAccount_Analytics",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "NCCI_GLAccount_Analytics",
+    "objectType": "index"
+  },
+  "updatedAt": "2026-11-22T00:56:05Z"
+}

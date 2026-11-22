@@ -1,0 +1,236 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "FOREIGN KEY"
+        ]
+      },
+      {
+        "id": "96d2e023-0fc0-4688-9571-a0f4dfcce2b9",
+        "isMissing": false,
+        "relationTypes": []
+      }
+    ],
+    "hasTransitiveMissingDependencies": false,
+    "requiredBy": [
+      "04e8f1ca-14ee-4f42-b004-2254463f671b",
+      "28dafc15-8dcc-4a76-b077-27bddf421275",
+      "32a0d055-6833-4e88-b89f-d42654961d95",
+      "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+      "6e0e076c-d2fe-4a7c-af4f-bc7d38cd8a4e",
+      "8a156bcb-884d-4747-a44d-259144f92f1b",
+      "8e7c23a9-b766-433b-8142-659d7310c9ad",
+      "8eec8fd3-b128-458a-9f72-7b7857d9a38e",
+      "9cf31ef4-0461-4c2b-9112-b4fe61dd576d",
+      "bf370666-0bf3-4da6-9172-75f006b8838c",
+      "e90d3531-dc33-4d8c-86fc-fd1dc3e52279",
+      "f42bb57b-0b2f-49e5-b4d9-70c5043f177e",
+      "f6ea4fac-78c8-4014-8da2-1c3cb9931501",
+      "fb418328-eaf8-4d0e-b5ff-41b0ffd83c13",
+      "fec044c6-5203-4597-84fa-9549a2c04bef"
+    ]
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/table/costcenter"
+    },
+    "converted": {
+      "checksum": "e9ba21390a08c04d06c1f32a3c932ef9",
+      "path": "snowflake/financial_planning/planning/table/costcenter.sql"
+    },
+    "source": {
+      "checksum": "881bb14e49ee28eb10915f74d044f375",
+      "path": "source/financial_planning/planning/table/costcenter.sql"
+    }
+  },
+  "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-FDM-0017",
+      "count": 4
+    },
+    {
+      "code": "SSC-FDM-0048",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 1,
+    "wave": 1,
+    "waveRank": 2
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": true,
+        "name": "CostCenterID",
+        "nullable": false,
+        "targetName": "CostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CostCenterCode",
+        "nullable": false,
+        "targetName": "CostCenterCode",
+        "targetType": "VARCHAR",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "CostCenterName",
+        "nullable": false,
+        "targetName": "CostCenterName",
+        "targetType": "NVARCHAR",
+        "type": "NVARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ParentCostCenterID",
+        "nullable": true,
+        "targetName": "ParentCostCenterID",
+        "targetType": "INT",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "HierarchyPath",
+        "nullable": true,
+        "targetName": "HierarchyPath",
+        "targetType": "VARCHAR",
+        "type": "HIERARCHYID"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "HierarchyLevel",
+        "nullable": true,
+        "targetName": "ManagerEmployeeID",
+        "targetType": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ManagerEmployeeID",
+        "nullable": true,
+        "targetName": "DepartmentCode",
+        "targetType": "VARCHAR",
+        "type": "INT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "DepartmentCode",
+        "nullable": true,
+        "targetName": "IsActive",
+        "targetType": "BOOLEAN",
+        "type": "VARCHAR"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "IsActive",
+        "nullable": false,
+        "targetName": "EffectiveFromDate",
+        "targetType": "DATE",
+        "type": "BIT"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EffectiveFromDate",
+        "nullable": false,
+        "targetName": "EffectiveToDate",
+        "targetType": "DATE",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "EffectiveToDate",
+        "nullable": true,
+        "targetName": "AllocationWeight",
+        "targetType": "DECIMAL",
+        "type": "DATE"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "AllocationWeight",
+        "nullable": false,
+        "targetName": "ValidFrom",
+        "targetType": "",
+        "type": "DECIMAL"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ValidFrom",
+        "nullable": false,
+        "targetName": "ValidTo",
+        "targetType": "",
+        "type": "DATETIME2"
+      },
+      {
+        "isCaseSpecific": false,
+        "isPrimaryKey": false,
+        "name": "ValidTo",
+        "nullable": false,
+        "type": "DATETIME2"
+      }
+    ],
+    "parameters": {
+      "arguments": [],
+      "returns": []
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.CostCenter",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "CostCenter",
+    "objectType": "table",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.CostCenter",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "CostCenter",
+    "objectType": "table",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

@@ -1,0 +1,373 @@
+{
+  "codeStatus": {
+    "assessment": {
+      "containsCommit": false,
+      "exclusion": [],
+      "status": "inProgress"
+    },
+    "conversion": {
+      "converterVersion": "2.54.2-Pr",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    },
+    "registration": {
+      "sourceId": "",
+      "status": "completed",
+      "updatedAt": "2026-11-22T00:56:05Z"
+    }
+  },
+  "dependencies": {
+    "dependsOn": [
+      {
+        "id": "624ca134-e9f5-4447-9a56-fbeb3f2833ca",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - FROM",
+          "INSERT",
+          "MERGE",
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "587c12f3-339a-4a47-b3c5-2d065420db5f",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "8968778a-95bb-4690-aa80-558680e1ea71",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "785b2e50-293d-47fa-addc-40a094eefbf0",
+        "isMissing": false,
+        "relationTypes": [
+          "SELECT - JOIN"
+        ]
+      },
+      {
+        "id": "ff1c7af3-6da5-4d75-befa-ebe2fabbf029",
+        "isMissing": true,
+        "relationTypes": [
+          "DROP",
+          "MERGE"
+        ]
+      },
+      {
+        "id": "fb2dcb74-b03d-4b09-9347-d39d23179fec",
+        "isMissing": false,
+        "relationTypes": []
+      },
+      {
+        "id": "d760008e-b25f-4499-b83e-80db94a21239",
+        "isMissing": false,
+        "relationTypes": []
+      },
+      {
+        "id": "160106ab-2804-450b-901a-43a57db5afa2",
+        "isMissing": false,
+        "relationTypes": []
+      }
+    ],
+    "hasTransitiveMissingDependencies": true,
+    "requiredBy": []
+  },
+  "extensions": {},
+  "files": {
+    "artifacts": {
+      "path": "artifacts/financial_planning/planning/procedure/usp_bulkimportbudgetdata"
+    },
+    "converted": {
+      "checksum": "bf2bcac46dd77534d93d4521e8ed0412",
+      "path": "snowflake/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql"
+    },
+    "source": {
+      "checksum": "cbe7bdaf0407df5eb468b4a7b6e2ea3c",
+      "path": "source/financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql"
+    }
+  },
+  "id": "fec044c6-5203-4597-84fa-9549a2c04bef",
+  "inScope": true,
+  "isMissing": false,
+  "issues": [
+    {
+      "code": "SSC-EWI-TS0089",
+      "count": 1,
+      "severity": "low"
+    },
+    {
+      "code": "SSC-EWI-TS0032",
+      "count": 2,
+      "severity": "high"
+    },
+    {
+      "code": "SSC-EWI-TS0086",
+      "count": 1,
+      "severity": "high"
+    },
+    {
+      "code": "SSC-EWI-0021",
+      "count": 2,
+      "severity": "medium"
+    },
+    {
+      "code": "SSC-EWI-0108",
+      "count": 3,
+      "severity": "high"
+    },
+    {
+      "code": "SSC-FDM-0041",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0029",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-0021",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0168",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0019",
+      "count": 3
+    },
+    {
+      "code": "SSC-FDM-TS0068",
+      "count": 18
+    },
+    {
+      "code": "SSC-FDM-TS0004",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0157",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-0131",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-TS0191",
+      "count": 2
+    },
+    {
+      "code": "SSC-FDM-0002",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0023",
+      "count": 1
+    },
+    {
+      "code": "SSC-FDM-TS0016",
+      "count": 4
+    },
+    {
+      "code": "SSC-FDM-0007",
+      "count": 1
+    }
+  ],
+  "kind": "databaseObject",
+  "planning": {
+    "topologicalRank": 3,
+    "wave": 1,
+    "waveRank": 4
+  },
+  "schemaVersion": 1,
+  "signature": {
+    "columns": [],
+    "parameters": {
+      "arguments": [
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ImportSource",
+          "required": true,
+          "targetName": "IMPORTSOURCE",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@FilePath",
+          "required": false,
+          "targetName": "BUDGETDATA",
+          "targetType": "ARRAY",
+          "type": "NVARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@FormatFilePath",
+          "required": false,
+          "targetName": "TARGETBUDGETHEADERID",
+          "targetType": "INT",
+          "type": "NVARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@BudgetData",
+          "required": true,
+          "targetName": "IMPORTRESULTS",
+          "targetType": "VARIANT",
+          "type": "PLANNING.BUDGETLINEITEMTABLETYPE"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@StagingTableName",
+          "required": false,
+          "targetName": "ROWSIMPORTED",
+          "targetType": "INT",
+          "type": "NVARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@LinkedServerName",
+          "required": false,
+          "targetName": "ROWSREJECTED",
+          "targetType": "INT",
+          "type": "NVARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@LinkedServerQuery",
+          "required": false,
+          "targetName": "FILEPATH",
+          "targetType": "STRING",
+          "type": "NVARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@TargetBudgetHeaderID",
+          "required": true,
+          "targetName": "FORMATFILEPATH",
+          "targetType": "STRING",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@ValidationMode",
+          "required": false,
+          "targetName": "STAGINGTABLENAME",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@DuplicateHandling",
+          "required": false,
+          "targetName": "LINKEDSERVERNAME",
+          "targetType": "STRING",
+          "type": "VARCHAR"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@BatchSize",
+          "required": false,
+          "targetName": "LINKEDSERVERQUERY",
+          "targetType": "STRING",
+          "type": "INT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@UseParallelLoad",
+          "required": false,
+          "targetName": "VALIDATIONMODE",
+          "targetType": "STRING",
+          "type": "BIT"
+        },
+        {
+          "direction": "in",
+          "isCursor": false,
+          "name": "@MaxDegreeOfParallelism",
+          "required": false,
+          "targetName": "DUPLICATEHANDLING",
+          "targetType": "STRING",
+          "type": "INT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@ImportResults",
+          "required": false,
+          "targetName": "BATCHSIZE",
+          "targetType": "INT",
+          "type": "XML"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@RowsImported",
+          "required": false,
+          "targetName": "USEPARALLELLOAD",
+          "targetType": "BOOLEAN",
+          "type": "INT"
+        },
+        {
+          "direction": "out",
+          "isCursor": false,
+          "name": "@RowsRejected",
+          "required": false,
+          "targetName": "MAXDEGREEOFPARALLELISM",
+          "targetType": "INT",
+          "type": "INT"
+        }
+      ],
+      "returns": [
+        {
+          "name": "'@BatchID'",
+          "type": "UNIQUEIDENTIFIER"
+        },
+        {
+          "name": "'@Source'",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "'@TargetBudgetID'",
+          "type": "INT"
+        },
+        {
+          "name": "'@DurationMs'",
+          "type": "INTEGER"
+        }
+      ]
+    }
+  },
+  "source": {
+    "canonicalName": "${financial_planning}.Planning.usp_BulkImportBudgetData(VARCHAR,NVARCHAR,NVARCHAR,PLANNING.BUDGETLINEITEMTABLETYPE,NVARCHAR,NVARCHAR,NVARCHAR,INT,VARCHAR,VARCHAR,INT,BIT,INT,XML,INT,INT)",
+    "database": "${financial_planning}",
+    "format": "sql",
+    "name": "usp_BulkImportBudgetData",
+    "objectType": "procedure",
+    "platform": "sqlServer",
+    "schema": "Planning"
+  },
+  "target": {
+    "canonicalName": "<%financial_planning%>.Planning.usp_BulkImportBudgetData(STRING,ARRAY,INT,VARIANT,INT,INT,STRING,STRING,STRING,STRING,STRING,STRING,STRING,INT,BOOLEAN,INT)",
+    "database": "<%financial_planning%>",
+    "format": "snowflakeSQL",
+    "name": "usp_BulkImportBudgetData",
+    "objectType": "procedure",
+    "schema": "Planning"
+  },
+  "updatedAt": "2026-11-22T01:25:50Z"
+}

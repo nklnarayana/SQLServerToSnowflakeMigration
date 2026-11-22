@@ -1,0 +1,46 @@
+sql_object_id,file_path,sql_object_type,presence,line_number,lines_of_code,deployment_order
+FINANCIAL_PLANNING.Planning.AllocationResultTableType,financial_planning/planning/type/allocationresulttabletype.sql,TYPE,SOURCE_ONLY,11,17,0
+FINANCIAL_PLANNING.Planning.AllocationRule,financial_planning/planning/table/allocationrule.sql,TABLE,BOTH,9,44,1
+FINANCIAL_PLANNING.Planning.AllocationRule.PXML_AllocationRule_TargetSpec,financial_planning/dbo/unknown_type/allocationrule.sql,INDEX,SOURCE_ONLY,5,2,2
+FINANCIAL_PLANNING.Planning.BudgetHeader,financial_planning/planning/table/budgetheader.sql,TABLE,BOTH,9,37,1
+FINANCIAL_PLANNING.Planning.BudgetHeader.PXML_BudgetHeader_ExtendedProperties,financial_planning/dbo/unknown_type/pxml_budgetheader_extendedproperties.sql,INDEX,SOURCE_ONLY,5,2,2
+FINANCIAL_PLANNING.Planning.BudgetHeader.SXML_BudgetHeader_ExtendedProperties_Path,financial_planning/dbo/unknown_type/sxml_budgetheader_extendedproperties_path.sql,INDEX,SOURCE_ONLY,5,4,2
+FINANCIAL_PLANNING.Planning.BudgetLineItem,financial_planning/planning/table/budgetlineitem.sql,TABLE,BOTH,9,49,2
+FINANCIAL_PLANNING.Planning.BudgetLineItem.IX_BudgetLineItem_Allocated,financial_planning/planning/index/budgetlineitem.ix_budgetlineitem_allocated.sql,INDEX,SOURCE_ONLY,5,3,3
+FINANCIAL_PLANNING.Planning.BudgetLineItem.NCCI_BudgetLineItem_Analytics,financial_planning/planning/index/budgetlineitem.ncci_budgetlineitem_analytics.sql,INDEX,SOURCE_ONLY,5,5,3
+FINANCIAL_PLANNING.Planning.BudgetLineItem.UQ_BudgetLineItem_NaturalKey,financial_planning/planning/index/budgetlineitem.uq_budgetlineitem_naturalkey.sql,INDEX,SOURCE_ONLY,5,3,3
+FINANCIAL_PLANNING.Planning.BudgetLineItemTableType,financial_planning/planning/type/budgetlineitemtabletype.sql,TYPE,SOURCE_ONLY,15,22,0
+FINANCIAL_PLANNING.Planning.ConsolidationJournal,financial_planning/planning/table/consolidationjournal.sql,TABLE,BOTH,9,49,2
+FINANCIAL_PLANNING.Planning.ConsolidationJournalLine,financial_planning/planning/table/consolidationjournalline.sql,TABLE,BOTH,9,43,3
+FINANCIAL_PLANNING.Planning.ConsolidationJournalLine.NCCI_ConsolidationJournalLine,financial_planning/planning/index/consolidationjournalline.ncci_consolidationjournalline.sql,INDEX,SOURCE_ONLY,5,5,4
+FINANCIAL_PLANNING.Planning.CostCenter,financial_planning/planning/table/costcenter.sql,TABLE,BOTH,11,29,0
+FINANCIAL_PLANNING.Planning.CostCenter.IX_CostCenter_Hierarchy,financial_planning/planning/index/costcenter.ix_costcenter_hierarchy.sql,INDEX,SOURCE_ONLY,5,2,1
+FINANCIAL_PLANNING.Planning.FiscalPeriod,financial_planning/planning/table/fiscalperiod.sql,TABLE,BOTH,9,26,0
+FINANCIAL_PLANNING.Planning.FiscalPeriod.IX_FiscalPeriod_Dates,financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_dates.sql,INDEX,SOURCE_ONLY,5,3,1
+FINANCIAL_PLANNING.Planning.FiscalPeriod.IX_FiscalPeriod_OpenPeriods,financial_planning/planning/index/fiscalperiod.ix_fiscalperiod_openperiods.sql,INDEX,SOURCE_ONLY,5,3,1
+FINANCIAL_PLANNING.Planning.GLAccount,financial_planning/planning/table/glaccount.sql,TABLE,BOTH,9,33,0
+FINANCIAL_PLANNING.Planning.GLAccount.NCCI_GLAccount_Analytics,financial_planning/planning/index/glaccount.ncci_glaccount_analytics.sql,INDEX,SOURCE_ONLY,5,2,1
+FINANCIAL_PLANNING.Planning.HierarchyNodeTableType,financial_planning/planning/type/hierarchynodetabletype.sql,TYPE,SOURCE_ONLY,9,14,0
+"FINANCIAL_PLANNING.Planning.fn_GetAllocationFactor(INT,INT,VARCHAR,INT,INT)",financial_planning/planning/function/fn_getallocationfactor.sql,FUNCTION,BOTH,15,91,3
+"FINANCIAL_PLANNING.Planning.fn_GetHierarchyPath(INT,NVARCHAR)",financial_planning/planning/function/fn_gethierarchypath.sql,FUNCTION,BOTH,14,38,1
+"FINANCIAL_PLANNING.Planning.tvf_ExplodeCostCenterHierarchy(INT,INT,BIT,DATE)",financial_planning/planning/function/tvf_explodecostcenterhierarchy.sql,FUNCTION,BOTH,15,103,1
+"FINANCIAL_PLANNING.Planning.tvf_GetBudgetVariance(INT,INT,SMALLINT,INT,CHAR,DECIMAL)",financial_planning/planning/function/tvf_getbudgetvariance.sql,FUNCTION,BOTH,14,93,3
+"FINANCIAL_PLANNING.Planning.usp_BulkImportBudgetData(VARCHAR,NVARCHAR,NVARCHAR,Planning.BudgetLineItemTableType,NVARCHAR,NVARCHAR,NVARCHAR,INT,VARCHAR,VARCHAR,INT,BIT,INT,XML,INT,INT)",financial_planning/planning/procedure/usp_bulkimportbudgetdata.sql,PROCEDURE,BOTH,30,482,3*
+"FINANCIAL_PLANNING.Planning.usp_ExecuteCostAllocation(INT,VARCHAR,INT,BIT,INT,INT,VARCHAR,Planning.AllocationResultTableType,INT,NVARCHAR)",financial_planning/planning/procedure/usp_executecostallocation.sql,PROCEDURE,BOTH,31,397,4
+"FINANCIAL_PLANNING.Planning.usp_GenerateRollingForecast(INT,INT,INT,VARCHAR,NVARCHAR,DECIMAL,DECIMAL,VARCHAR,INT,NVARCHAR)",financial_planning/planning/procedure/usp_generaterollingforecast.sql,PROCEDURE,BOTH,30,418,3
+"FINANCIAL_PLANNING.Planning.usp_PerformFinancialClose(INT,VARCHAR,BIT,BIT,BIT,BIT,NVARCHAR,BIT,INT,XML,VARCHAR)",financial_planning/planning/procedure/usp_performfinancialclose.sql,PROCEDURE,BOTH,35,465,5*
+"FINANCIAL_PLANNING.Planning.usp_ProcessBudgetConsolidation(INT,INT,VARCHAR,BIT,BIT,XML,INT,BIT,INT,NVARCHAR)",financial_planning/planning/procedure/usp_processbudgetconsolidation.sql,PROCEDURE,BOTH,25,472,3*
+"FINANCIAL_PLANNING.Planning.usp_ReconcileIntercompanyBalances(INT,DATE,XML,DECIMAL,DECIMAL,BIT,XML,INT,DECIMAL)",financial_planning/planning/procedure/usp_reconcileintercompanybalances.sql,PROCEDURE,BOTH,30,352,4*
+FINANCIAL_PLANNING.Planning.vw_AllocationRuleTargets,financial_planning/planning/view/vw_allocationruletargets.sql,VIEW,BOTH,14,40,2
+FINANCIAL_PLANNING.Planning.vw_BudgetConsolidationSummary,financial_planning/planning/view/vw_budgetconsolidationsummary.sql,VIEW,BOTH,15,63,3
+FINANCIAL_PLANNING.Planning.vw_BudgetConsolidationSummary.IX_vw_BudgetConsolidationSummary,financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary.sql,INDEX,SOURCE_ONLY,5,4,4
+FINANCIAL_PLANNING.Planning.vw_BudgetConsolidationSummary.IX_vw_BudgetConsolidationSummary_Year,financial_planning/planning/index/vw_budgetconsolidationsummary.ix_vw_budgetconsolidationsummary_year.sql,INDEX,SOURCE_ONLY,5,3,4
+PUBLIC.FOR_XML_UDF(),UDF Helpers/FOR_XML_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+PUBLIC.HIERARCHY_GET_LEVEL_UDF(),UDF Helpers/HIERARCHYID_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+PUBLIC.OPENJSON_UDF(),UDF Helpers/JSON_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+PUBLIC.OPENXML_UDF(),UDF Helpers/OPENXML_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+PUBLIC.QUOTENAME_UDF(),UDF Helpers/QUOTENAME_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+PUBLIC.RAISERROR_UDF(),UDF Helpers/RAISERROR_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+PUBLIC.THROW_UDP(),UDF Helpers/THROW_UDP.sql,PROCEDURE,SNOWFLAKE_ONLY,,,0
+PUBLIC.TRANSFORM_SP_EXECUTE_SQL_STRING_UDF(),UDF Helpers/TRANSFORM_SP_EXECUTE_SQL_STRING_UDF.sql,FUNCTION,SNOWFLAKE_ONLY,,,0
+Planning.CostCenter_View,Views/Planning_CostCenter_View.sql,VIEW,SNOWFLAKE_ONLY,1,,0
