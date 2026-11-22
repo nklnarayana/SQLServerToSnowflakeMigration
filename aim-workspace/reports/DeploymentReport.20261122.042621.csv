@@ -1,0 +1,2 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+financial_planning.Planning.usp_ExecuteCostAllocation,Procedure,Deployed,,financial_planning,Planning,financial_planning.Planning.usp_ExecuteCostAllocation,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
