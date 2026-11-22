@@ -1,0 +1,6 @@
+OBJECT_NAME,OBJECT_TYPE,STATUS,ERROR_MESSAGE,DATABASE,SCHEMA,FQN,SNOWSIGHT_URL
+financial_planning.Planning.vw_AllocationRuleTargets,View,Failed,"Error: JavaScript execution error: Uncaught Execution of multiple statements failed on statement ""CREATE OR REPLACE VIEW Plannin..."" (at line 47, position 0).
+SQL compilation error:
+Lateral View cannot be on the left side of join in SYSTEM$MULTISTMT at '    throw `Execution of multiple statements failed on statement {0} (at line {1}, position {2}).`.replace('{1}', LINES[i])' position 4
+stackstrace: 
+SYSTEM$MULTISTMT line: 10 SqlState: P0000, VendorCode: 100132, QueryId: 01c8938d-030a-0cce-0000-001353eefbd1",financial_planning,Planning,financial_planning.Planning.vw_AllocationRuleTargets,https://app.snowflake.com/AVSSIRJ/OY42416/#/data/databases/FINANCIAL_PLANNING/schemas/PLANNING
