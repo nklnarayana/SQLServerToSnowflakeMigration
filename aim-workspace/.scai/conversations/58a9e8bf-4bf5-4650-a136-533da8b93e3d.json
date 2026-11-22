@@ -10755,6 +10755,7 @@
       "timestamp": 1795316794204
     },
     {
+      "endedAt": 1795320338105,
       "expanded": false,
       "input": {
         "questions": [
@@ -10777,7 +10778,10 @@
       },
       "kind": "tool",
       "parentToolUseId": null,
-      "result": null,
+      "result": {
+        "content": "Interrupted",
+        "isError": true
+      },
       "timestamp": 1795316796447,
       "toolName": "ask_user_question",
       "toolUseId": "toolu_bdrk_01Fs3gdERGZDzt6FnUbtTD4F"
@@ -10788,6 +10792,7 @@
       "freeform": {},
       "kind": "question",
       "parentToolUseId": null,
+      "parked": true,
       "questions": [
         {
           "answerKey": "What target table type should the data land in?",
@@ -11057,5 +11062,5 @@
     }
   ],
   "title": "I have the scripts stored locally",
-  "updatedAt": "2026-11-22T03:06:37.847Z"
+  "updatedAt": "2026-11-22T04:05:39.480Z"
 }
