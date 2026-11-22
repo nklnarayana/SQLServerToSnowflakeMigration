@@ -1,0 +1,96 @@
+tables:
+- source:
+    tableName: FiscalPeriod
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: FISCALPERIOD
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - FiscalPeriodID
+- source:
+    tableName: AllocationRule
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: ALLOCATIONRULE
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - AllocationRuleID
+- source:
+    tableName: CostCenter
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: COSTCENTER
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - CostCenterID
+- source:
+    tableName: ConsolidationJournal
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: CONSOLIDATIONJOURNAL
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - JournalID
+- source:
+    tableName: BudgetLineItem
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: BUDGETLINEITEM
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - BudgetLineItemID
+- source:
+    tableName: BudgetHeader
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: BUDGETHEADER
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - BudgetHeaderID
+- source:
+    tableName: ConsolidationJournalLine
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: CONSOLIDATIONJOURNALLINE
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - JournalLineID
+- source:
+    tableName: GLAccount
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: GLACCOUNT
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+  columnNamesToPartitionBy:
+  - GLAccountID
+- source:
+    tableName: CostCenterHistory
+    schemaName: Planning
+    databaseName: FinancialPlanning
+  target:
+    tableName: COSTCENTERHISTORY
+    schemaName: PLANNING
+    databaseName: FINANCIAL_PLANNING
+defaultTableConfiguration:
+  synchronization:
+    strategy: full-replace
+  extraction:
+    strategy: regular
+  continueIdentityColumns: true
+affinity: aim-workspace-d9017fa6

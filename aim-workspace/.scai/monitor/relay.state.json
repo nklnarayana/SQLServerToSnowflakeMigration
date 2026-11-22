@@ -1,7 +1,7 @@
 {
   "version": 1,
   "epoch": 0,
-  "next_seq": 4,
+  "next_seq": 7,
   "jobs": [
     {
       "job_id": "t-4cf76ee66d1c",
@@ -20,6 +20,24 @@
       "failed": true,
       "started_unix": 1795317692,
       "updated_unix": 1795317702
+    },
+    {
+      "job_id": "t-a742e4a73436",
+      "kind": "test_run",
+      "params": {
+        "job_id": "t-a742e4a73436",
+        "mode": "capture",
+        "object_ids": [
+          "341a180c-0f3a-4066-8637-ccb6e60b45a7"
+        ]
+      },
+      "launcher_pid": 45744,
+      "last_status": "failed",
+      "summary": "capture: Error [INT0002]: Failed to establish sqlserver connection: Failed to establish connection after 3 attempts. Last error: Failed to connect to SQL Server: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]Client unable to establish connection (0) (SQLDriverConnect)')",
+      "terminal": true,
+      "failed": true,
+      "started_unix": 1795322280,
+      "updated_unix": 1795322300
     }
   ],
   "agents": [
@@ -183,10 +201,10 @@
     }
   ],
   "spawned_by": {
-    "74e993e9-f1dd-485d-9938-a5525c52afd6": "2021f224-cd53-46c4-b8af-6e632d18b821",
     "6c9222b8-6e97-4f9d-8122-29d38bc48d4a": "2021f224-cd53-46c4-b8af-6e632d18b821",
-    "79df5f24-2ff5-4a3f-a380-a1f753335c5f": "2021f224-cd53-46c4-b8af-6e632d18b821",
-    "18af2e4a-5adb-4ca7-94ec-e271c37776f6": "2021f224-cd53-46c4-b8af-6e632d18b821"
+    "74e993e9-f1dd-485d-9938-a5525c52afd6": "2021f224-cd53-46c4-b8af-6e632d18b821",
+    "18af2e4a-5adb-4ca7-94ec-e271c37776f6": "2021f224-cd53-46c4-b8af-6e632d18b821",
+    "79df5f24-2ff5-4a3f-a380-a1f753335c5f": "2021f224-cd53-46c4-b8af-6e632d18b821"
   },
   "sf_actions": [
     {

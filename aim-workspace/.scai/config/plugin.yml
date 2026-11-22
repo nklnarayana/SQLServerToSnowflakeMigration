@@ -6,6 +6,7 @@ code_source: local
 dashboard_port: 7878
 data_infra_intent: 'true'
 data_migration_extraction_strategy: odbc
+data_migration_sync_strategy: full-replace
 data_migration_type: full
 data_orchestrator_placement: direct
 data_validation_type: full
